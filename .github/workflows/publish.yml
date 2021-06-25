@@ -1,0 +1,17 @@
+name: publish
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build:
+    name: Cocoapods publish
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Publish to CocoaPod trunk
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          pod trunk push PayULite.podspec
