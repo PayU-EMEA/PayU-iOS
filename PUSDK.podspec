@@ -59,7 +59,7 @@ Pod::Spec.new do |s|
     s.subspec 'PUTheme' do |ss|
       ss.source_files = 'PUTheme/Sources/PUTheme/**/*'
       ss.dependency 'PUSDK/PUCore'
-      ss.dependency 'Kingfisher', `~> '6.3.1'
+      ss.dependency 'Kingfisher', '6.3.1'
     end
 
     s.subspec 'PUThreeDS' do |ss|
