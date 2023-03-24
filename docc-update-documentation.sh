@@ -1,5 +1,7 @@
 # https://developer.apple.com/documentation/xcode/distributing-documentation-to-external-developers
 
+REPOSITORY_NAME="PayU-iOS"
+
 XCODE_SCHEME="PUSDK"
 XCODE_DERIVED_DATA_PATH="docc"
 XCODE_DESTINATION="generic/platform=ios"
@@ -10,6 +12,6 @@ cd "$XCODE_DERIVED_DATA_PATH"/Build/Products/Debug-iphoneos
 $(xcrun --find docc) process-archive \
   transform-for-static-hosting "$XCODE_SCHEME".doccarchive \
   --output-path ../../../../"$XCODE_OTPUT_PATH" \
-  --hosting-base-path PayU-iOS
+  --hosting-base-path "$REPOSITORY_NAME"
 cd ../../../../
 rm -rf docc
