@@ -15,4 +15,5 @@ generate_mocks:
 
 ## ➡️  xcodebuild_test: Run all tests
 xcodebuild_test:
+	make generate_mocks
 	./xcodebuild-test.sh

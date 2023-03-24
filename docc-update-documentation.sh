@@ -2,14 +2,14 @@
 
 XCODE_SCHEME="PUSDK"
 XCODE_DERIVED_DATA_PATH="docc"
-XCODE_DESTINATION="platform=iOS Simulator,OS=16.2,name=iPhone 14"
+XCODE_DESTINATION="generic/platform=ios"
 XCODE_OTPUT_PATH="docs"
 
 # Creates static page for documentation
-cd docc/Build/Products/Debug-iphonesimulator
+cd "$XCODE_DERIVED_DATA_PATH"/Build/Products/Debug-iphoneos
 $(xcrun --find docc) process-archive \
-  transform-for-static-hosting PUSDK.doccarchive \
+  transform-for-static-hosting "$XCODE_SCHEME".doccarchive \
   --output-path ../../../../"$XCODE_OTPUT_PATH" \
-  --hosting-base-path docc
+  --hosting-base-path PayU-iOS
 cd ../../../../
 rm -rf docc

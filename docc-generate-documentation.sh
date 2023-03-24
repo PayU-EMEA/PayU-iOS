@@ -2,13 +2,18 @@
 
 XCODE_SCHEME="PUSDK"
 XCODE_DERIVED_DATA_PATH="docc"
-XCODE_DESTINATION="platform=iOS Simulator,OS=16.2,name=iPhone 14"
+XCODE_DESTINATION="generic/platform=ios"
 XCODE_OTPUT_PATH="docs"
 
 # Removes `DerivedData` if exists
 rm -rf ~/Library/Developer/Xcode/DerivedData
 
-# Generates documentation
+# Build
+xcodebuild build \
+  -scheme "$XCODE_SCHEME" \
+  -destination "$XCODE_DESTINATION"
+
+# Generates
 xcodebuild docbuild \
   -scheme "$XCODE_SCHEME" \
   -derivedDataPath "$XCODE_DERIVED_DATA_PATH" \
