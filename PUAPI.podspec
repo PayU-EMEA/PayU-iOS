@@ -11,8 +11,9 @@ Pod::Spec.new do |s|
     s.source            = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
 
     s.ios.deployment_target = '11.0'
-    
     s.source_files = 'PUAPI/Sources/PUAPI/**/*'
+
+    s.default_subspec = 'PUCore'
 
     s.subspec 'PUCore' do |ss|
       ss.source_files = 'PUCore/Sources/PUCore/**/*'
