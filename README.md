@@ -24,6 +24,24 @@ Allows to make payments in PayU ecosystem.
 * [PUTranslations](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithtranslations)
 * [PUWebPayments](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithwebpayments)
 
+## Installation
+
+### [Swift Package Manager](https://www.swift.org/package-manager/)
+
+To add a package dependency to your Xcode project, select File > Add Packages. You can also navigate to your target’s General pane, and in the `Frameworks, Libraries, and Embedded Content` section, click the + button, select `Add Other`, and choose `Add Package Dependency`. 
+
+* Package URL: `https://github.com/PayU-EMEA/PayU-iOS.git`
+* Dependency Rule: `Branch`
+* Branch: `release/2.0.0-alpha`
+
+Then choose Package Products you want to use:
+
+* `PUSDK` - when you want to use the whole Package (Apple Pay, Payment Methods, Web Payments, etc.)
+* Any Other - when you want to use just one special Package
+
+### CocoaPods
+
+// TODO: - Add ability to install via CocoaPods
 
 ## Example
 
