@@ -8,6 +8,7 @@ DerivedData/
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .swiftpm/xcode/package.xcworkspace/xcuserdata/
 .netrc
+project.json
 
 # Generated
 *.generated.swift
