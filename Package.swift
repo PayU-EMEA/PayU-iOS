@@ -163,7 +163,7 @@ let package = Package(
       ],
       path: "PUPaymentCard",
       resources: [
-        .process("../PUPaymentCard/Sources/PUPaymentCard/Data")
+        .process("../PUPaymentCard/Sources/PUPaymentCard/Resources/cards.json")
       ]
     ),
     .target(
@@ -233,7 +233,10 @@ let package = Package(
       dependencies: [
         "PUCore"
       ],
-      path: "PUTranslations"
+      path: "PUTranslations",
+      resources: [
+        .process("../PUTranslations/Sources/PUTranslations/Resources")
+      ]
     ),
     .target(
       name: "PUWebPayments",

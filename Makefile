@@ -1,11 +1,13 @@
-.PHONY: help generate_documentation generate_mocks
+.PHONY: help generate_documentation generate_mocks xcodebuild_test
 
 help: Makefile
 	@sed -n "s/^##//p" $<
 
 ## ➡️  generate_documentation: Generate `docs` folder with generated `PUSDK.doccarchive`
 generate_documentation:
-	./generate-documentation.sh
+	./docc-generate-documentation.sh
+	sleep 5
+	./docc-update-documentation.sh
 
 ## ➡️  generate_mocks: Generate *.mocks
 generate_mocks:
