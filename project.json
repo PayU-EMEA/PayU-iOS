@@ -1,0 +1,1174 @@
+{
+  "default_localization" : "pl",
+  "dependencies" : [
+    {
+      "identity" : "kingfisher",
+      "requirement" : {
+        "exact" : [
+          "6.3.1"
+        ]
+      },
+      "type" : "sourceControl",
+      "url" : "https://github.com/onevcat/Kingfisher.git"
+    },
+    {
+      "identity" : "mockingbird",
+      "requirement" : {
+        "range" : [
+          {
+            "lower_bound" : "0.20.0",
+            "upper_bound" : "0.21.0"
+          }
+        ]
+      },
+      "type" : "sourceControl",
+      "url" : "https://github.com/birdrides/mockingbird"
+    }
+  ],
+  "manifest_display_name" : "PUSDK",
+  "name" : "PUSDK",
+  "path" : "/Users/anton/Development/payu/payu-swift",
+  "platforms" : [
+    {
+      "name" : "ios",
+      "version" : "11.0"
+    }
+  ],
+  "products" : [
+    {
+      "name" : "PUSDK",
+      "targets" : [
+        "PUSDK"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUAPI",
+      "targets" : [
+        "PUAPI"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUApplePay",
+      "targets" : [
+        "PUApplePay"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUCore",
+      "targets" : [
+        "PUCore"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUMastercardInstallments",
+      "targets" : [
+        "PUMastercardInstallments"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUPaymentCard",
+      "targets" : [
+        "PUPaymentCard"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUPaymentCardScanner",
+      "targets" : [
+        "PUPaymentCardScanner"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUPaymentMethods",
+      "targets" : [
+        "PUPaymentMethods"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUTheme",
+      "targets" : [
+        "PUTheme"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUThreeDS",
+      "targets" : [
+        "PUThreeDS"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUTranslations",
+      "targets" : [
+        "PUTranslations"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "PUWebPayments",
+      "targets" : [
+        "PUWebPayments"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    }
+  ],
+  "targets" : [
+    {
+      "c99name" : "PUWebPaymentsTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUWebPaymentsTests",
+      "path" : "Tests/PUWebPaymentsTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "sources" : [
+        "Mocks/PUAPIMocks.generated.swift",
+        "Mocks/PUWebPaymentsMocks.generated.swift",
+        "Sources/CVV/CVVAuthorizationExtractorTests.swift",
+        "Sources/CVV/CVVAuthorizationResultTests.swift",
+        "Sources/CVV/CVVAuthorizationServiceTests.swift",
+        "Sources/CVV/Network/Client/CVVAuthorizationNetworkClientTests.swift",
+        "Sources/CVV/Network/Client/CVVAuthorizationNetworkTargetTests.swift",
+        "Sources/CVV/Network/Client/CVVAuthorizationRepositoryTests.swift",
+        "Sources/CVV/Network/Models/CVVAuthorizationRequestTests.swift",
+        "Sources/Extensions/ErrorExtensionsTests.swift",
+        "Sources/Extensions/URLComponentsTests.swift",
+        "Sources/Matchers/PayByLinkUrlMatcherTests.swift",
+        "Sources/Matchers/ThreeDSUrlMatcherTests.swift",
+        "Sources/Matchers/WebPaymentsUrlMatcherFactoryTests.swift",
+        "Sources/Models/WebPaymentsRequestTests.swift",
+        "Sources/Models/WebPaymentsResultTests.swift",
+        "Sources/WebPaymentsViewModelTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUWebPayments"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUWebPayments",
+      "module_type" : "SwiftTarget",
+      "name" : "PUWebPayments",
+      "path" : "PUWebPayments",
+      "product_memberships" : [
+        "PUSDK",
+        "PUWebPayments"
+      ],
+      "sources" : [
+        "Sources/PUWebPayments/CVV/CVVAuthorizationExtractor.swift",
+        "Sources/PUWebPayments/CVV/CVVAuthorizationPresenter.swift",
+        "Sources/PUWebPayments/CVV/CVVAuthorizationResult.swift",
+        "Sources/PUWebPayments/CVV/CVVAuthorizationService.swift",
+        "Sources/PUWebPayments/CVV/Network/Client/CVVAuthorizationNetworkClient.swift",
+        "Sources/PUWebPayments/CVV/Network/Client/CVVAuthorizationNetworkTarget.swift",
+        "Sources/PUWebPayments/CVV/Network/Client/CVVAuthorizationRepository.swift",
+        "Sources/PUWebPayments/CVV/Network/Models/CVVAuthorizationRequest.swift",
+        "Sources/PUWebPayments/CVV/Network/Models/CVVAuthorizationResponse.swift",
+        "Sources/PUWebPayments/Core/Assembler/Assembler.swift",
+        "Sources/PUWebPayments/Extensions/Error+Extensions.swift",
+        "Sources/PUWebPayments/Extensions/URL+Extensions.swift",
+        "Sources/PUWebPayments/Extensions/URLComponents+Extensions.swift",
+        "Sources/PUWebPayments/Matchers/PayByLinkUrlMatcher.swift",
+        "Sources/PUWebPayments/Matchers/ThreeDSUrlMatcher.swift",
+        "Sources/PUWebPayments/Matchers/WebPaymentsUrlMatcher.swift",
+        "Sources/PUWebPayments/Matchers/WebPaymentsUrlMatcherFactory.swift",
+        "Sources/PUWebPayments/Matchers/WebPaymentsUrlMatcherResult.swift",
+        "Sources/PUWebPayments/Models/WebPaymentsRequest.swift",
+        "Sources/PUWebPayments/Models/WebPaymentsResult.swift",
+        "Sources/PUWebPayments/WebPaymentsAddressBar.swift",
+        "Sources/PUWebPayments/WebPaymentsViewController.swift",
+        "Sources/PUWebPayments/WebPaymentsViewModel.swift"
+      ],
+      "target_dependencies" : [
+        "PUTheme",
+        "PUTranslations"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUTranslationsTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUTranslationsTests",
+      "path" : "Tests/PUTranslationsTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "sources" : [
+        "Mocks/PUCoreMocks.generated.swift",
+        "Mocks/PUTranslationsMocks.generated.swift",
+        "Sources/Extensions/StringExtensionsTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore",
+        "PUTranslations"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUTranslations",
+      "module_type" : "SwiftTarget",
+      "name" : "PUTranslations",
+      "path" : "PUTranslations",
+      "product_memberships" : [
+        "PUSDK",
+        "PUMastercardInstallments",
+        "PUPaymentCard",
+        "PUPaymentCardScanner",
+        "PUPaymentMethods",
+        "PUTranslations",
+        "PUWebPayments"
+      ],
+      "resources" : [
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/fr.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "fr"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/ro.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "ro"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/fr.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "fr"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/es.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "es"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/sl.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "sl"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/lv.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "lv"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/de.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "de"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/uk.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "uk"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/hu.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "hu"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/hu.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "hu"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/de.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "de"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/es.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "es"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/cs.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "cs"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/cs.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "cs"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/lv.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "lv"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/en.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "en"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/ro.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "ro"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/en.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "en"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/sl.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "sl"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/uk.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "uk"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/pl.lproj/Localizable.strings",
+          "rule" : {
+            "process" : {
+              "localization" : "pl"
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUTranslations/Sources/PUTranslations/Resources/pl.lproj/Plurals.stringsdict",
+          "rule" : {
+            "process" : {
+              "localization" : "pl"
+            }
+          }
+        }
+      ],
+      "sources" : [
+        "Sources/PUTranslations/Extensions/Bundle+Extensions.swift",
+        "Sources/PUTranslations/Extensions/String+Extensions.swift",
+        "Sources/PUTranslations/Models/DefaultLanguageCodeProvider.swift",
+        "Sources/PUTranslations/Models/LanguageCodeProvider.swift",
+        "Sources/PUTranslations/Models/NumberCategory.swift",
+        "Sources/PUTranslations/Models/TableName.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUThreeDSTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUThreeDSTests",
+      "path" : "Tests/PUThreeDSTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "sources" : [
+        "Mocks/PUAPIMocks.generated.swift",
+        "Mocks/PUThreeDSMocks.generated.swift",
+        "Sources/Extensions/URLComponentsExtensionsTests.swift",
+        "Sources/Helpers/SoftAcceptConfigurationTests.swift",
+        "Sources/Helpers/SoftAcceptQueryParameterExtractorTests.swift",
+        "Sources/Helpers/SoftAcceptUrlModifierTests.swift",
+        "Sources/Models/SoftAcceptRequestTests.swift",
+        "Sources/Models/SoftAcceptResultTests.swift",
+        "Sources/Models/SoftAcceptStatusTests.swift",
+        "Sources/Network/Client/SoftAcceptNetworkTargetTests.swift",
+        "Sources/Network/Client/SoftAcceptRepositoryTests.swift",
+        "Sources/Network/Models/SoftAcceptLogTests.swift",
+        "Sources/Service/SoftAcceptServiceTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUCore",
+        "PUTheme",
+        "PUThreeDS"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUThreeDS",
+      "module_type" : "SwiftTarget",
+      "name" : "PUThreeDS",
+      "path" : "PUThreeDS",
+      "product_memberships" : [
+        "PUSDK",
+        "PUThreeDS"
+      ],
+      "sources" : [
+        "Sources/PUThreeDS/Assembler/Assembler.swift",
+        "Sources/PUThreeDS/Extensions/URLComponents+Extensions.swift",
+        "Sources/PUThreeDS/Helpers/SoftAcceptComponents.swift",
+        "Sources/PUThreeDS/Helpers/SoftAcceptConfiguration.swift",
+        "Sources/PUThreeDS/Helpers/SoftAcceptQueryParameterExtractor.swift",
+        "Sources/PUThreeDS/Helpers/SoftAcceptUrlModifier.swift",
+        "Sources/PUThreeDS/Models/SoftAcceptRequest.swift",
+        "Sources/PUThreeDS/Models/SoftAcceptResult.swift",
+        "Sources/PUThreeDS/Models/SoftAcceptStatus.swift",
+        "Sources/PUThreeDS/Network/Client/SoftAcceptNetworkTarget.swift",
+        "Sources/PUThreeDS/Network/Client/SoftAcceptRepository.swift",
+        "Sources/PUThreeDS/Network/Models/SoftAcceptLog.swift",
+        "Sources/PUThreeDS/Network/Models/SoftAcceptResponse.swift",
+        "Sources/PUThreeDS/Service/SoftAcceptService.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUCore",
+        "PUTheme"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUTheme",
+      "module_type" : "SwiftTarget",
+      "name" : "PUTheme",
+      "path" : "PUTheme",
+      "product_dependencies" : [
+        "Kingfisher"
+      ],
+      "product_memberships" : [
+        "PUSDK",
+        "PUMastercardInstallments",
+        "PUPaymentCard",
+        "PUPaymentCardScanner",
+        "PUPaymentMethods",
+        "PUTheme",
+        "PUThreeDS",
+        "PUWebPayments"
+      ],
+      "sources" : [
+        "Sources/PUTheme/Controllers/PortraitNavigationController.swift",
+        "Sources/PUTheme/Extensions/UIColor+Extensions.swift",
+        "Sources/PUTheme/Extensions/UIView+Constraints.swift",
+        "Sources/PUTheme/Extensions/UIView+Extensions.swift",
+        "Sources/PUTheme/Theme/PUTheme.swift",
+        "Sources/PUTheme/Theme/Themes/BorderTheme.swift",
+        "Sources/PUTheme/Theme/Themes/CardTheme.swift",
+        "Sources/PUTheme/Theme/Themes/ColorTheme.swift",
+        "Sources/PUTheme/Theme/Themes/ElevatedButtonTheme.swift",
+        "Sources/PUTheme/Theme/Themes/TextInputTheme.swift",
+        "Sources/PUTheme/Theme/Themes/TextTheme.swift",
+        "Sources/PUTheme/Views/PUCardView.swift",
+        "Sources/PUTheme/Views/PUElevatedButton.swift",
+        "Sources/PUTheme/Views/PUImageView.swift",
+        "Sources/PUTheme/Views/PULabel.swift",
+        "Sources/PUTheme/Views/PULogoView.swift",
+        "Sources/PUTheme/Views/PUTextField.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUSDKTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUSDKTests",
+      "path" : "Tests/PUSDKTests",
+      "sources" : [
+        "PUSDKTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUSDK"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUSDK",
+      "module_type" : "SwiftTarget",
+      "name" : "PUSDK",
+      "path" : "Sources/PUSDK",
+      "product_memberships" : [
+        "PUSDK"
+      ],
+      "sources" : [
+        "PUSDK.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUCore",
+        "PUMastercardInstallments",
+        "PUPaymentCard",
+        "PUPaymentCardScanner",
+        "PUPaymentMethods",
+        "PUTheme",
+        "PUThreeDS",
+        "PUTranslations",
+        "PUWebPayments"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUPaymentMethodsTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUPaymentMethodsTests",
+      "path" : "Tests/PUPaymentMethodsTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "resources" : [
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUPaymentMethodsTests/Data/Files/card_tokens.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUPaymentMethodsTests/Data/Files/blik_tokens.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUPaymentMethodsTests/Data/Files/pay_by_links.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        }
+      ],
+      "sources" : [
+        "Data/Decoder/Decoder.swift",
+        "Mocks/PUApplePayMocks.generated.swift",
+        "Mocks/PUCoreMocks.generated.swift",
+        "Mocks/PUPaymentMethodsMocks.generated.swift",
+        "Mocks/PUTranslationsMocks.generated.swift",
+        "Sources/Core/PaymentMethodsConfigurationTests.swift",
+        "Sources/Core/PaymentMethodsItem/PaymentMethodsItemFactoryTests.swift",
+        "Sources/Core/PaymentMethodsItem/PaymentMethodsItemTests.swift",
+        "Sources/Core/PaymentMethodsProcessorTests.swift",
+        "Sources/Core/PaymentMethodsServiceTests.swift",
+        "Sources/Features/PBLPaymentMethods/PBLPaymentMethodsViewModelTests.swift",
+        "Sources/Features/PaymentMethods/PaymentMethodsViewModelTests.swift",
+        "Sources/Features/PaymentMethodsWidget/PaymentMethodsWidgetStateDecoratorTests.swift",
+        "Sources/Features/PaymentMethodsWidget/PaymentMethodsWidgetViewModelTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUApplePay",
+        "PUCore",
+        "PUPaymentCard",
+        "PUPaymentMethods",
+        "PUTranslations"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUPaymentMethods",
+      "module_type" : "SwiftTarget",
+      "name" : "PUPaymentMethods",
+      "path" : "PUPaymentMethods",
+      "product_memberships" : [
+        "PUSDK",
+        "PUPaymentMethods"
+      ],
+      "sources" : [
+        "Sources/PUPaymentMethods/Core/Assembler/Assembler.swift",
+        "Sources/PUPaymentMethods/Core/PaymentMethodsConfiguration.swift",
+        "Sources/PUPaymentMethods/Core/PaymentMethodsItem/PaymentMethodsItem.swift",
+        "Sources/PUPaymentMethods/Core/PaymentMethodsItem/PaymentMethodsItemFactory.swift",
+        "Sources/PUPaymentMethods/Core/PaymentMethodsProcessor.swift",
+        "Sources/PUPaymentMethods/Core/PaymentMethodsService.swift",
+        "Sources/PUPaymentMethods/Core/PaymentMethodsStorage.swift",
+        "Sources/PUPaymentMethods/Features/Blik/BlikAlertViewControllerPresenter.swift",
+        "Sources/PUPaymentMethods/Features/PBLPaymentMethods/PBLPaymentMethodsCell.swift",
+        "Sources/PUPaymentMethods/Features/PBLPaymentMethods/PBLPaymentMethodsViewController.swift",
+        "Sources/PUPaymentMethods/Features/PBLPaymentMethods/PBLPaymentMethodsViewModel.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethods/PaymentMethodsCell.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethods/PaymentMethodsViewController.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethods/PaymentMethodsViewModel.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethodsWidget/PaymentMethodsWidget.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethodsWidget/PaymentMethodsWidgetState.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethodsWidget/PaymentMethodsWidgetStateDecorator.swift",
+        "Sources/PUPaymentMethods/Features/PaymentMethodsWidget/PaymentMethodsWidgetViewModel.swift"
+      ],
+      "target_dependencies" : [
+        "PUApplePay",
+        "PUCore",
+        "PUPaymentCard",
+        "PUTheme",
+        "PUTranslations"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUPaymentCardTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUPaymentCardTests",
+      "path" : "Tests/PUPaymentCardTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "sources" : [
+        "Mocks/PUAPIMocks.generated.swift",
+        "Mocks/PUCoreMocks.generated.swift",
+        "Mocks/PUPaymentCardMocks.generated.swift",
+        "Sources/Core/PaymentCardServiceTests.swift",
+        "Sources/Core/PaymentCardTests.swift",
+        "Sources/Network/Client/PaymentCardNetworkClientTests.swift",
+        "Sources/Network/Client/PaymentCardNetworkTargetTests.swift",
+        "Sources/Network/Client/PaymentCardRepositoryTests.swift",
+        "Sources/Network/Models/TokenCreateRequestTests.swift",
+        "Sources/Network/Models/TokenCreateResponseTests.swift",
+        "Sources/ViewController/PaymentCardViewModelTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUCore",
+        "PUPaymentCard",
+        "PUPaymentCardScanner"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUPaymentCardScannerTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUPaymentCardScannerTests",
+      "path" : "Tests/PUPaymentCardScannerTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "sources" : [
+        "Mocks/PUCoreMocks.generated.swift",
+        "Mocks/PUPaymentCardScannerMocks.generated.swift",
+        "Sources/Core/Models/PaymentCardScannerResultTests.swift",
+        "Sources/Core/Services/PaymentCardScannerServiceTests.swift",
+        "Sources/Core/Services/PaymentCardScannerTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore",
+        "PUPaymentCardScanner"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUPaymentCardScanner",
+      "module_type" : "SwiftTarget",
+      "name" : "PUPaymentCardScanner",
+      "path" : "PUPaymentCardScanner",
+      "product_memberships" : [
+        "PUSDK",
+        "PUPaymentCard",
+        "PUPaymentCardScanner",
+        "PUPaymentMethods"
+      ],
+      "sources" : [
+        "Sources/PUPaymentCardScanner/Core/Assembler/Assembler.swift",
+        "Sources/PUPaymentCardScanner/Core/Models/PaymentCardScannerError.swift",
+        "Sources/PUPaymentCardScanner/Core/Models/PaymentCardScannerOption.swift",
+        "Sources/PUPaymentCardScanner/Core/Models/PaymentCardScannerResult.swift",
+        "Sources/PUPaymentCardScanner/Core/Services/PaymentCardScanner.swift",
+        "Sources/PUPaymentCardScanner/Core/Services/PaymentCardScannerService.swift",
+        "Sources/PUPaymentCardScanner/ViewController/PaymentCardScannerOverlayView.swift",
+        "Sources/PUPaymentCardScanner/ViewController/PaymentCardScannerViewController.swift"
+      ],
+      "target_dependencies" : [
+        "PUTheme",
+        "PUTranslations"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUPaymentCard",
+      "module_type" : "SwiftTarget",
+      "name" : "PUPaymentCard",
+      "path" : "PUPaymentCard",
+      "product_memberships" : [
+        "PUSDK",
+        "PUPaymentCard",
+        "PUPaymentMethods"
+      ],
+      "resources" : [
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUPaymentCard/Sources/PUPaymentCard/Data/cards.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        }
+      ],
+      "sources" : [
+        "Sources/PUPaymentCard/Core/Assembler/Assembler.swift",
+        "Sources/PUPaymentCard/Core/Extensions/NSNotification+Extensions.swift",
+        "Sources/PUPaymentCard/Core/PaymentCard.swift",
+        "Sources/PUPaymentCard/Core/PaymentCardService.swift",
+        "Sources/PUPaymentCard/Core/PaymentCardServicePresenter.swift",
+        "Sources/PUPaymentCard/Core/Test/TestPaymentCard.swift",
+        "Sources/PUPaymentCard/Core/Test/TestPaymentCardCell.swift",
+        "Sources/PUPaymentCard/Core/Test/TestPaymentCardsViewController.swift",
+        "Sources/PUPaymentCard/Core/Test/TestPaymentCardsViewModel.swift",
+        "Sources/PUPaymentCard/Network/Client/PaymentCardNetworkClient.swift",
+        "Sources/PUPaymentCard/Network/Client/PaymentCardNetworkTarget.swift",
+        "Sources/PUPaymentCard/Network/Client/PaymentCardRepository.swift",
+        "Sources/PUPaymentCard/Network/Models/TokenCreateRequest.swift",
+        "Sources/PUPaymentCard/Network/Models/TokenCreateResponse.swift",
+        "Sources/PUPaymentCard/TermsAndConditions/TermsAndConditionsView.swift",
+        "Sources/PUPaymentCard/ViewController/PaymentCardViewController.swift",
+        "Sources/PUPaymentCard/ViewController/PaymentCardViewModel.swift",
+        "Sources/PUPaymentCard/ViewController/UseCases/OpenTestCardsUseCase.swift",
+        "Sources/PUPaymentCard/Widget/PaymentCardProviderView.swift",
+        "Sources/PUPaymentCard/Widget/PaymentCardProvidersView.swift",
+        "Sources/PUPaymentCard/Widget/PaymentCardTextInputView.swift",
+        "Sources/PUPaymentCard/Widget/PaymentCardWidget.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUCore",
+        "PUPaymentCardScanner",
+        "PUTheme",
+        "PUTranslations"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUMastercardInstallmentsTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUMastercardInstallmentsTests",
+      "path" : "Tests/PUMastercardInstallmentsTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "resources" : [
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUMastercardInstallmentsTests/Data/Files/mastercard_installments_vnoo.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUMastercardInstallmentsTests/Data/Files/mastercard_installments_vnoi.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUMastercardInstallmentsTests/Data/Files/installment_proposal.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUMastercardInstallmentsTests/Data/Files/installment_option.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        }
+      ],
+      "sources" : [
+        "Data/Decoder/Decoder.swift",
+        "Mocks/PUMastercardInstallmentsMocks.generated.swift",
+        "Sources/Core/Extensions/NumberFormatterExtensionsTests.swift",
+        "Sources/Core/Models/InstallmentOptionTests.swift",
+        "Sources/Core/Models/InstallmentProposalTests.swift",
+        "Sources/Core/Models/InstallmentResultTests.swift",
+        "Sources/Core/Offer/OfferViewModelTests.swift",
+        "Sources/Core/Options/OptionsFactoryTests.swift",
+        "Sources/Core/Options/OptionsViewModelTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUMastercardInstallments"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUMastercardInstallments",
+      "module_type" : "SwiftTarget",
+      "name" : "PUMastercardInstallments",
+      "path" : "PUMastercardInstallments",
+      "product_memberships" : [
+        "PUSDK",
+        "PUMastercardInstallments"
+      ],
+      "sources" : [
+        "Sources/PUMastercardInstallments/Core/Assembler/Assembler.swift",
+        "Sources/PUMastercardInstallments/Core/Extensions/NumberFormatter+Extensions.swift",
+        "Sources/PUMastercardInstallments/Core/Models/InstallmentOption.swift",
+        "Sources/PUMastercardInstallments/Core/Models/InstallmentProposal.swift",
+        "Sources/PUMastercardInstallments/Core/Models/InstallmentResult.swift",
+        "Sources/PUMastercardInstallments/Offer/OfferViewController.swift",
+        "Sources/PUMastercardInstallments/Offer/OfferViewModel.swift",
+        "Sources/PUMastercardInstallments/Options/OptionsCell.swift",
+        "Sources/PUMastercardInstallments/Options/OptionsFactory.swift",
+        "Sources/PUMastercardInstallments/Options/OptionsItem.swift",
+        "Sources/PUMastercardInstallments/Options/OptionsViewController.swift",
+        "Sources/PUMastercardInstallments/Options/OptionsViewModel.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore",
+        "PUTheme",
+        "PUTranslations"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUCoreTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUCoreTests",
+      "path" : "Tests/PUCoreTests",
+      "product_dependencies" : [
+        "Mockingbird"
+      ],
+      "resources" : [
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUCoreTests/Data/Files/pbl_card_token.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUCoreTests/Data/Files/pbl_apple_pay.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUCoreTests/Data/Files/pbl_pay_by_link.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUCoreTests/Data/Files/pbl_installments.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/Tests/PUCoreTests/Data/Files/pbl_blik_token.json",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        }
+      ],
+      "sources" : [
+        "Data/Decoder/Decoder.swift",
+        "Mocks/PUCoreMocks.generated.swift",
+        "Sources/Extensions/DateExtensionsTests.swift",
+        "Sources/Extensions/StringExtensionsTests.swift",
+        "Sources/Extensions/UIImageExtensionsTests.swift",
+        "Sources/Helpers/DefaultTextFormatterTests.swift",
+        "Sources/Helpers/PaymentCard/DefaultPaymentCardDateParserTests.swift",
+        "Sources/Helpers/PaymentCard/DefaultPaymentCardFormatterTests.swift",
+        "Sources/Helpers/PaymentCard/DefaultPaymentCardLuhnValidatorTests.swift",
+        "Sources/Helpers/PaymentCard/DefaultPaymentCardProviderFinderTests.swift",
+        "Sources/Helpers/PaymentCard/DefaultPaymentCardProviderMatcherTests.swift",
+        "Sources/Helpers/PaymentCard/DefaultPaymentCardValidatorTests.swift",
+        "Sources/Helpers/PaymentCard/PaymentCardProviderTests.swift",
+        "Sources/Models/POSTests.swift",
+        "Sources/Models/PaymentMethods/ApplePayTests.swift",
+        "Sources/Models/PaymentMethods/BlikCodeTests.swift",
+        "Sources/Models/PaymentMethods/BlikTokenTests.swift",
+        "Sources/Models/PaymentMethods/CardTokenTests.swift",
+        "Sources/Models/PaymentMethods/InstallmentsTests.swift",
+        "Sources/Models/PaymentMethods/PayByLinkTests.swift",
+        "Sources/Models/PaymentMethods/PayMethodTests.swift",
+        "Sources/Models/PaymentMethods/PaymentMethodValueTests.swift",
+        "Sources/PayUTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUCore",
+      "module_type" : "SwiftTarget",
+      "name" : "PUCore",
+      "path" : "PUCore",
+      "product_memberships" : [
+        "PUSDK",
+        "PUAPI",
+        "PUCore",
+        "PUMastercardInstallments",
+        "PUPaymentCard",
+        "PUPaymentCardScanner",
+        "PUPaymentMethods",
+        "PUTheme",
+        "PUThreeDS",
+        "PUTranslations",
+        "PUWebPayments"
+      ],
+      "sources" : [
+        "Sources/PUCore/Console/Console.swift",
+        "Sources/PUCore/Extensions/Date+Extensions.swift",
+        "Sources/PUCore/Extensions/Foundation+Extensions.swift",
+        "Sources/PUCore/Extensions/String+Extensions.swift",
+        "Sources/PUCore/Extensions/UIImage+Extensions.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardDateParser/DefaultPaymentCardDateParser.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardDateParser/PaymentCardDateParserFactory.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardDateParser/PaymentCardDateParserProtocol.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardError.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardFormatter/DefaultPaymentCardFormatter.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardFormatter/PaymentCardFormatterFactory.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardFormatter/PaymentCardFormatterProtocol.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardLuhnValidator/DefaultPaymentCardLuhnValidator.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardLuhnValidator/PaymentCardLuhnValidatorFactory.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardLuhnValidator/PaymentCardLuhnValidatorProtocol.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProvider.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProviderFinder/DefaultPaymentCardProviderFinder.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProviderFinder/PaymentCardProviderFinderFactory.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProviderFinder/PaymentCardProviderFinderProtocol.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProviderMatcher/DefaultPaymentCardProviderMatcher.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProviderMatcher/PaymentCardProviderMatcherFactory.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardProviderMatcher/PaymentCardProviderMatcherProtocol.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardValidator/Implementations/DefaultPaymentCardCVVValidator.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardValidator/Implementations/DefaultPaymentCardDateValidator.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardValidator/Implementations/DefaultPaymentCardNumberValidator.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardValidator/PaymentCardValidatorFactory.swift",
+        "Sources/PUCore/Helpers/PaymentCard/PaymentCardValidator/PaymentCardValidatorProtocol.swift",
+        "Sources/PUCore/Helpers/TextFormatter/DefaultTextFormatter.swift",
+        "Sources/PUCore/Helpers/TextFormatter/TextFormatterFactory.swift",
+        "Sources/PUCore/Helpers/TextFormatter/TextFormatterProtocol.swift",
+        "Sources/PUCore/Models/BrandImageProvider.swift",
+        "Sources/PUCore/Models/Environment.swift",
+        "Sources/PUCore/Models/POS.swift",
+        "Sources/PUCore/Models/PaymentMethods/ApplePay.swift",
+        "Sources/PUCore/Models/PaymentMethods/BlikCode.swift",
+        "Sources/PUCore/Models/PaymentMethods/BlikToken.swift",
+        "Sources/PUCore/Models/PaymentMethods/CardToken.swift",
+        "Sources/PUCore/Models/PaymentMethods/Installments.swift",
+        "Sources/PUCore/Models/PaymentMethods/PayByLink.swift",
+        "Sources/PUCore/Models/PaymentMethods/PayMethod.swift",
+        "Sources/PUCore/Models/PaymentMethods/PaymentMethod.swift",
+        "Sources/PUCore/Models/PaymentMethods/PaymentMethodValue.swift",
+        "Sources/PUCore/PayU.swift"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUApplePayTests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUApplePayTests",
+      "path" : "Tests/PUApplePayTests",
+      "sources" : [
+        "Sources/src/ApplePayServiceTests.swift",
+        "Sources/src/Classes/PaymentRequestTests.swift",
+        "Sources/src/Extensions/PKMerchantCapabilityExtensionsTests.swift",
+        "Sources/src/Extensions/PKPaymentNetworkExtensionsTests.swift",
+        "Sources/src/Extensions/PKPaymentRequestExtensionsTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUApplePay"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUApplePay",
+      "module_type" : "SwiftTarget",
+      "name" : "PUApplePay",
+      "path" : "PUApplePay",
+      "product_memberships" : [
+        "PUSDK",
+        "PUApplePay",
+        "PUPaymentMethods"
+      ],
+      "sources" : [
+        "Sources/PUApplePay/ApplePayServiceFactory.swift",
+        "Sources/PUApplePay/ApplePayServiceProtocol.swift",
+        "Sources/PUApplePay/Classes/PaymentError.swift",
+        "Sources/PUApplePay/Classes/PaymentRequest.swift",
+        "Sources/PUApplePay/DefaultApplePayService.swift",
+        "Sources/PUApplePay/Extensions/PKMerchantCapability+Extensions.swift",
+        "Sources/PUApplePay/Extensions/PKPaymentNetwork+Extensions.swift",
+        "Sources/PUApplePay/Extensions/PKPaymentRequest+Extensions.swift"
+      ],
+      "type" : "library"
+    },
+    {
+      "c99name" : "PUAPITests",
+      "module_type" : "SwiftTarget",
+      "name" : "PUAPITests",
+      "path" : "Tests/PUAPITests",
+      "sources" : [
+        "Sources/Client/NetworkClientCertificateTests.swift",
+        "Sources/Models/NetworkClientConfigurationTests.swift"
+      ],
+      "target_dependencies" : [
+        "PUAPI",
+        "PUCore"
+      ],
+      "type" : "test"
+    },
+    {
+      "c99name" : "PUAPI",
+      "module_type" : "SwiftTarget",
+      "name" : "PUAPI",
+      "path" : "PUAPI",
+      "product_memberships" : [
+        "PUSDK",
+        "PUAPI",
+        "PUPaymentCard",
+        "PUPaymentMethods",
+        "PUThreeDS"
+      ],
+      "resources" : [
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUAPI/Sources/PUAPI/Certificates/payu-root-ca-01.cer",
+          "rule" : {
+            "copy" : {
+
+            }
+          }
+        },
+        {
+          "path" : "/Users/anton/Development/payu/payu-swift/PUAPI/Sources/PUAPI/Certificates/entrust-root-certificate-authority-G2.cer",
+          "rule" : {
+            "copy" : {
+
+            }
+          }
+        }
+      ],
+      "sources" : [
+        "Sources/PUAPI/Assembler/Assembler.swift",
+        "Sources/PUAPI/Client/NetworkClient.swift",
+        "Sources/PUAPI/Client/NetworkClientAuthenticationChallengeHandler.swift",
+        "Sources/PUAPI/Client/NetworkClientCertificate.swift",
+        "Sources/PUAPI/Client/NetworkTarget.swift",
+        "Sources/PUAPI/Models/NetworkClientConfiguration.swift",
+        "Sources/PUAPI/Models/NetworkClientError.swift",
+        "Sources/PUAPI/Models/NetworkClientStatus.swift",
+        "Sources/PUAPI/Models/NetworkClientStatusCode.swift"
+      ],
+      "target_dependencies" : [
+        "PUCore"
+      ],
+      "type" : "library"
+    }
+  ],
+  "tools_version" : "5.7"
+}
