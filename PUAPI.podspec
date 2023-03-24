@@ -16,5 +16,6 @@ Pod::Spec.new do |s|
 
     s.subspec 'PUCore' do |ss|
       ss.source_files = 'PUCore/Sources/PUCore/**/*'
+      ss.resource_bundles = { 'PUCore' => ['PUCore/*/*.{xcassets}'] }
     end
 end
