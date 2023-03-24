@@ -130,7 +130,7 @@ let package = Package(
       dependencies: [],
       path: "PUCore",
       resources: [
-        .process("../PUCore/Sources/PUCore/Resources/Media.xcassets")
+        .process("../PUCore/Resources/Media.xcassets")
       ],
       linkerSettings: [
         .linkedFramework(
