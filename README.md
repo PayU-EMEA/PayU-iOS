@@ -10,6 +10,7 @@ Allows to make payments in PayU ecosystem.
 
 * [Backend Integration](https://developers.payu.com/en/restapi.html)
 * [Mobile Integration](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/)
+* ❗️[Communication](https://developers.payu.com/en/mobile_sdk.html)
 
 ## [PUSDK](https://payu-emea.github.io/PayU-iOS/documentation/pusdk) consists of:
 
