@@ -11,7 +11,7 @@ import Mockingbird
 @testable import PUPaymentMethods
 @testable import PUTranslations
 
-final class PaymentCardNetworkClientTests: XCTestCase {
+final class PaymentMethodsItemTests: XCTestCase {
 
   private var languageCodeProvider: LanguageCodeProviderMock!
 
@@ -164,7 +164,7 @@ final class PaymentCardNetworkClientTests: XCTestCase {
 
 }
 
-private extension PaymentCardNetworkClientTests {
+private extension PaymentMethodsItemTests {
   func makeBrandImageUrl() -> String {
     "https://www.payu.com/image_\(UUID().uuidString).jpg"
   }

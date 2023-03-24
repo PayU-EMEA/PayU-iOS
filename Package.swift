@@ -129,6 +129,9 @@ let package = Package(
       name: "PUCore",
       dependencies: [],
       path: "PUCore",
+      resources: [
+        .process("../PUCore/Sources/PUCore/Resources/Media.xcassets")
+      ],
       linkerSettings: [
         .linkedFramework(
           "UIKit",
