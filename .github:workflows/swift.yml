@@ -25,15 +25,17 @@ jobs:
     - name: Build
       run: xcodebuild \
         -scheme ${{env.XCODE_SCHEME}} \
-        -destination ${{env.XCODE_DESTINATION}}
+        -destination ${{env.XCODE_DESTINATION}} \
+        -testLanguage en \
+        -testRegion en_US
 
     - name: Show eligible build destinations
       run: xcodebuild -showdestinations -scheme PUSDK-Package
 
     - name: Run tests
       run: xcodebuild \
-        -test \
         -scheme ${{env.XCODE_SCHEME}} \
-        -destination ${{env.XCODE_DESTINATION}}
+        -destination ${{env.XCODE_DESTINATION}} \
         -testLanguage en \
-        -testRegion en_US
+        -testRegion en_US \
+        test
