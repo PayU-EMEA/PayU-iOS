@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
     s.license   = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
     s.source    = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
 
-    s.platform          = :ios
+    s.platform              = :ios
     s.ios.deployment_target = '11.0'
-    s.ios.swift_version     = '5.3'
+    s.swift_version         = '5.3'
 
     s.subspec 'PUAPI' do |ss|
       ss.source_files       = 'PUAPI/Sources/PUAPI/**/*'
