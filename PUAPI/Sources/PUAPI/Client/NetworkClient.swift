@@ -20,7 +20,7 @@ public struct NetworkClient: NetworkClientProtocol {
   // MARK: - Factory
   public final class Factory {
     // MARK: - Private Properties
-    private let assembler = PUAPI.Assembler()
+    private let assembler = APIAssembler()
 
     // MARK: - Initialization
     public init() {  }

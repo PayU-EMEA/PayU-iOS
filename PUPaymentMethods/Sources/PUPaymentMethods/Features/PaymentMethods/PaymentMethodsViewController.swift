@@ -34,12 +34,10 @@ public final class PaymentMethodsViewController: UITableViewController {
   public final class Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PaymentMethodsAssembler()
 
     // MARK: - Initialization
-    public init() {
-      assembler = Assembler()
-    }
+    public init() {  }
 
     // MARK: - Public Methods
     /// Returns default implementation for ``PaymentMethodsViewController``

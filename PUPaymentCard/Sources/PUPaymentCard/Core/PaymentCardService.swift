@@ -52,12 +52,10 @@ public final class PaymentCardService: PaymentCardServiceProtocol, PaymentCardSe
   public struct Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PaymentCardAssembler()
 
     // MARK: - Initialization
-    public init() {
-      self.assembler = Assembler()
-    }
+    public init() {  }
 
     // MARK: - Public Methods
     /// Returns default implementation for ``PaymentCardServiceProtocol``service

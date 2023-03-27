@@ -1,5 +1,5 @@
 //
-//  Assembler.swift
+//  PaymentMethodsAssembler.swift
 //  
 //  Created by PayU S.A. on 12/01/2023.
 //  Copyright © 2022 PayU S.A. All rights reserved.
@@ -9,7 +9,7 @@ import Foundation
 import PUApplePay
 import PUCore
 
-struct Assembler {
+struct PaymentMethodsAssembler {
 
   func makeApplePayService() -> ApplePayServiceProtocol {
     ApplePayServiceFactory().make()

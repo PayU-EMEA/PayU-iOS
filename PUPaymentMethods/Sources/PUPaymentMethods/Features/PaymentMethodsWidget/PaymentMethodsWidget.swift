@@ -31,12 +31,10 @@ public final class PaymentMethodsWidget: UIView {
   /// Factory which allows to create the ``PaymentMethodsWidget`` instance
   public struct Factory {
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PaymentMethodsAssembler()
 
     // MARK: - Initialization
-    public init() {
-      self.assembler = Assembler()
-    }
+    public init() {  }
 
     // MARK: - Publuc Methods
     /// Returns default implementation for ``PaymentMethodsWidget``

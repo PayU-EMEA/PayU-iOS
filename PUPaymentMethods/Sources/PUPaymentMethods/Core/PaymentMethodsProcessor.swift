@@ -55,7 +55,7 @@ public final class PaymentMethodsProcessor: PaymentMethodsProcessorProtocol {
   public struct Factory {
 
     // MARK: - Private Properties
-    private let assembler = Assembler()
+    private let assembler = PaymentMethodsAssembler()
 
     // MARK: - Initialization
     public init() {  }

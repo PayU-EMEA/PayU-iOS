@@ -1,5 +1,5 @@
 //
-//  Assembler.swift
+//  PaymentCardScannerAssembler.swift
 //  
 //  Created by PayU S.A. on 08/03/2023.
 //  Copyright © 2023 PayU S.A. All rights reserved.
@@ -8,7 +8,7 @@
 import PUCore
 
 @available(iOS 13.0, *)
-final class Assembler {
+final class PaymentCardScannerAssembler {
 
   func makePaymentCardDateParser() -> PaymentCardDateParserProtocol {
     PaymentCardDateParserFactory().make()

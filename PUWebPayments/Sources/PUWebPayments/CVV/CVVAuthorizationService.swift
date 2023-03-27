@@ -33,12 +33,10 @@ public final class CVVAuthorizationService {
   /// Factory which allows to create the ``CVVAuthorizationService`` instance
   public struct Factory {
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = WebPaymentsAssembler()
 
     // MARK: - Initialization
-    public init() {
-      self.assembler = Assembler()
-    }
+    public init() {  }
 
     // MARK: - Initialization
     /// Returns default implementation for ``CVVAuthorizationService``

@@ -19,12 +19,10 @@ final class OptionsViewController: UITableViewController {
   final class Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = MastercardInstallmentsAssembler()
 
     // MARK: - Initialization
-    init() {
-      assembler = Assembler()
-    }
+    init() {  }
 
     // MARK: - Methods
     func make(proposal: InstallmentProposal) -> OptionsViewController {

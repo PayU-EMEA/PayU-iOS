@@ -18,12 +18,10 @@ public final class PaymentCardWidget: UIView {
   public final class Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PaymentCardAssembler()
 
     // MARK: - Initialization
-    public init() {
-      assembler = Assembler()
-    }
+    public init() {  }
 
     // MARK: - Public Methods
     /// Returns default implementation for ``PaymentCardWidget``

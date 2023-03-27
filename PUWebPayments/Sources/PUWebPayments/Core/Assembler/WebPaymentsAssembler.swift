@@ -1,5 +1,5 @@
 //
-//  Assembler.swift
+//  WebPaymentsAssembler.swift
 //  
 //  Created by PayU S.A. on 09/03/2023.
 //  Copyright © 2022 PayU S.A. All rights reserved.
@@ -9,7 +9,7 @@ import Foundation
 import PUAPI
 import PUCore
 
-final class Assembler {
+final class WebPaymentsAssembler {
 
   func makeCVVAuthorizationTextFormatter() -> TextFormatterProtocol {
     TextFormatterFactory().makeCVV()

@@ -19,12 +19,10 @@ final class PBLPaymentMethodsViewController: UICollectionViewController {
   public final class Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PaymentMethodsAssembler()
 
     // MARK: - Initialization
-    public init() {
-      assembler = Assembler()
-    }
+    public init() {  }
 
     // MARK: - Public Methods
     public func make(

@@ -19,12 +19,10 @@ final class TestPaymentCardsViewController: UITableViewController {
   struct Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PaymentCardAssembler()
 
     // MARK: - Initialization
-    init() {
-      assembler = Assembler()
-    }
+    init() {  }
 
     // MARK: - Public Methods
     func make() -> TestPaymentCardsViewController {

@@ -36,7 +36,7 @@ public final class SoftAcceptService: NSObject, WKScriptMessageHandler {
   public struct Factory {
 
     // MARK: - Private Properties
-    private let assembler = PUThreeDS.Assembler()
+    private let assembler = ThreeDSAssembler()
 
     // MARK: - Initialization
     public init() {  }

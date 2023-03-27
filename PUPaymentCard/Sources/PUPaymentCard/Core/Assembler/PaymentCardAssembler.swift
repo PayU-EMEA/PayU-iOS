@@ -1,5 +1,5 @@
 //
-//  Assembler.swift
+//  PaymentCardAssembler.swift
 //  
 //  Created by PayU S.A. on 07/03/2023.
 //  Copyright © 2023 PayU S.A. All rights reserved.
@@ -9,7 +9,7 @@ import PUAPI
 import PUCore
 import UIKit
 
-struct Assembler {
+struct PaymentCardAssembler {
 
   func makeNetworkClient() -> NetworkClient {
     NetworkClient.Factory().make()
