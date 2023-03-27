@@ -5,8 +5,13 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
+#if canImport(PUAPI)
 import PUAPI
+#endif
+
+#if canImport(PUCore)
 import PUCore
+#endif
 
 struct TokenCreateResponse: Codable, Equatable {
 

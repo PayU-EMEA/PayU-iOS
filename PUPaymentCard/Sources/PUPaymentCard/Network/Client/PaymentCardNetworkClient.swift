@@ -6,8 +6,14 @@
 //
 
 import Foundation
+
+#if canImport(PUAPI)
 import PUAPI
+#endif
+
+#if canImport(PUCore)
 import PUCore
+#endif
 
 protocol PaymentCardNetworkClientProtocol {
   func tokenize(

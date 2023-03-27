@@ -5,9 +5,19 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
-import PUTheme
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 /// This class allows to put the ``PaymentCardWidget`` in any ViewController you want with the ``PaymentCardWidget/Configuration``
 public final class PaymentCardWidget: UIView {

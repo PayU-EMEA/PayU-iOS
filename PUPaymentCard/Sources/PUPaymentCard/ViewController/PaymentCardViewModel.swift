@@ -5,8 +5,11 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
 
 protocol PaymentCardViewModelProtocol {
   func didTapOpenTestCards(in presentingViewController: UIViewController)

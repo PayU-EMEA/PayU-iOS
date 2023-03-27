@@ -6,10 +6,19 @@
 //
 
 import Foundation
-import PUCore
-import PUTheme
-import PUTranslations
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 final class PaymentCardTextInputView: PUTextField {
 

@@ -6,10 +6,19 @@
 //
 
 import Foundation
-import PUCore
-import PUPaymentCardScanner
-import PUTheme
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUPaymentCardScanner)
+import PUPaymentCardScanner
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
 
 /// The protocol which is the abstraction between user interface and API
 public protocol PaymentCardServiceProtocol {

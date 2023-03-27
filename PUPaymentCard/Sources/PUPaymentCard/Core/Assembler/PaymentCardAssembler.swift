@@ -5,9 +5,15 @@
 //  Copyright © 2023 PayU S.A. All rights reserved.
 //
 
-import PUAPI
-import PUCore
 import UIKit
+
+#if canImport(PUAPI)
+import PUAPI
+#endif
+
+#if canImport(PUCore)
+import PUCore
+#endif
 
 struct PaymentCardAssembler {
 

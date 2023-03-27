@@ -6,7 +6,10 @@
 //
 
 import Foundation
+
+#if canImport(PUCore)
 import PUCore
+#endif
 
 protocol TestPaymentCardsViewModelProtocol {
   func numberOfSections() -> Int

@@ -5,10 +5,19 @@
 //  Copyright © 2023 PayU S.A. All rights reserved.
 //
 
-import PUCore
-import PUPaymentCardScanner
-import PUTheme
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUPaymentCardScanner)
+import PUPaymentCardScanner
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
 
 protocol PaymentCardServicePresenterProtocol {
   func presentPaymentCardScannerViewController(

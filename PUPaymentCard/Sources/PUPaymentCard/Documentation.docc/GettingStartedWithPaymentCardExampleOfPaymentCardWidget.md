@@ -10,7 +10,6 @@ An example on how to interact with PaymentCardWidget
 
 ```swift
 import PUPaymentCard
-import PUCore
 import UIKit
 
 class AwesomeViewController: ViewController {
