@@ -6,8 +6,14 @@
 //
 
 import Foundation
+
+#if canImport(PUApplePay)
 import PUApplePay
+#endif
+
+#if canImport(PUCore)
 import PUCore
+#endif
 
 struct PaymentMethodsAssembler {
 
