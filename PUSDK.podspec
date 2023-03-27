@@ -1,29 +1,30 @@
 Pod::Spec.new do |s|  
-    s.name              = 'PUSDK'
-    s.version           = '2.0.0-alpha'
-    s.summary           = 'PayU mobile SDK for iOS'
-    s.homepage          = 'http://developers.payu.com/en/mobile_sdk.html'
+    s.name    = 'PUSDK'
+    s.version = '2.0.0-alpha'
+    s.summary = 'PayU mobile SDK for iOS'
+    s.homepage  = 'http://developers.payu.com/en/mobile_sdk.html'
 
-    s.author            = { 'PayU' => 'itsupport@payu.pl' }
-    s.license           = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
+    s.author  = { 'PayU' => 'itsupport@payu.pl' }
+    s.license = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
 
-    s.platform          = :ios
-    s.source            = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
+    s.platform  = :ios
+    s.source    = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
 
     s.ios.deployment_target = '11.0'
 
-    s.default_subspecs = 'PUAPI', 'PUApplePay', 'PUCore'
-
     s.subspec 'PUAPI' do |ss|
+      ss.name         = 'PUAPI'
       ss.source_files = 'PUAPI/Sources/PUAPI/**/*'
-      ss.dependency 'PUSDK/PUCore'
+      ss.dependency     'PUSDK/PUCore'
     end
 
     s.subspec 'PUApplePay' do |ss|
+      ss.name         = 'PUApplePay'
       ss.source_files = 'PUApplePay/Sources/PUApplePay/**/*'
     end
 
     s.subspec 'PUCore' do |ss|
+      ss.name         = 'PUCore'
       ss.source_files = 'PUCore/Sources/PUCore/**/*'
     end
 
