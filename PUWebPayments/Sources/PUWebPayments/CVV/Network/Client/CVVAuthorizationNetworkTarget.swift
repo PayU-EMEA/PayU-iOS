@@ -6,7 +6,10 @@
 //
 
 import Foundation
+
+#if canImport(PUAPI)
 import PUAPI
+#endif
 
 enum CVVAuthorizationNetworkTarget {
   case authorizeCVV(CVVAuthorizationRequest)

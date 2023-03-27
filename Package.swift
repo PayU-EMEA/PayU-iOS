@@ -240,6 +240,7 @@ let package = Package(
     .target(
       name: "PUWebPayments",
       dependencies: [
+        "PUCore",
         "PUTheme",
         "PUTranslations"
       ],

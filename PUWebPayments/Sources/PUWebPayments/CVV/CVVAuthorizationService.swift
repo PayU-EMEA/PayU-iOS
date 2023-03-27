@@ -5,10 +5,19 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
-import PUTheme
-import PUTranslations
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 /// Protocol which defines the completion result of ``CVVAuthorizationService``
 public protocol CVVAuthorizationServiceDelegate: AnyObject {

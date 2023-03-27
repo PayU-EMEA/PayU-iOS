@@ -5,9 +5,15 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
-import PUTranslations
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 protocol CVVAuthorizationPresenterProtocol {
   func presentCVVAlertViewController(

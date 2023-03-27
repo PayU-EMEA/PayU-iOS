@@ -6,7 +6,10 @@
 //
 
 import Foundation
+
+#if canImport(PUAPI)
 import PUAPI
+#endif
 
 protocol CVVAuthorizationNetworkClientProtocol {
   func authorizeCVV(

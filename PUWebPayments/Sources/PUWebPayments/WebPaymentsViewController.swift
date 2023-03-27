@@ -6,9 +6,15 @@
 //
 
 import Foundation
-import PUCore
-import PUTheme
 import WebKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
 
 /// Implementing this protocol, you'll receive the callbacks from ``WebPaymentsViewController``
 public protocol WebPaymentsViewControllerDelegate: AnyObject {

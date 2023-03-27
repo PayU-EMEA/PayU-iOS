@@ -6,8 +6,6 @@ An example on how to interact with WebPaymentsViewController
 
 ```swift
 import Foundation
-import PUCore
-import PUThreeDS
 import PUWebPayments
 import UIKit
 

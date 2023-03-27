@@ -56,4 +56,13 @@ Pod::Spec.new do |s|
     ss.dependency         'PUSDK/PUCore'
   end
 
+  s.subspec 'PUWebPayments' do |ss|
+    ss.source_files       = 'PUWebPayments/Sources/PUWebPayments/**/*'
+    ss.exclude_files      = ['PUWebPayments/Sources/PUWebPayments/*.{docc}']
+    ss.framework          = 'WebKit'
+    ss.dependency         'PUSDK/PUCore'
+    ss.dependency         'PUSDK/PUTheme'
+    ss.dependency         'PUSDK/PUTranslations'
+  end
+
 end
