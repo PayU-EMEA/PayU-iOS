@@ -7,7 +7,9 @@
 
 import Foundation
 import Security
+#if canImport(PUCore)
 import PUCore
+#endif
 
 struct NetworkClientCertificate {
 

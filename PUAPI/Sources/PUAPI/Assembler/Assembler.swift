@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(PUCore)
 import PUCore
+#endif
 
 struct Assembler {
 

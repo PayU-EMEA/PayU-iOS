@@ -12,20 +12,23 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '11.0'
     s.ios.swift_version     = '5.3'
 
-    # s.subspec 'PUAPI' do |ss|
-    #   ss.source_files = 'PUAPI/Sources/PUAPI/**/*'
-    #   ss.dependency     'PUSDK/PUCore'
-    # end
+    s.subspec 'PUAPI' do |ss|
+      ss.source_files       = 'PUAPI/Sources/PUAPI/**/*'
+      ss.exclude_files      = 'PUAPI/Sources/Documentation'
+      ss.resource_bundles   = { 'PUAPI' => ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']}
+      ss.resources          = ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']
+      ss.dependency         'PUSDK/PUCore'
+    end
 
     # s.subspec 'PUApplePay' do |ss|
     #   ss.source_files = 'PUApplePay/Sources/PUApplePay/**/*'
     # end
 
     s.subspec 'PUCore' do |ss|
-      ss.source_files = 'PUCore/Sources/PUCore/**/*'
-      ss.exclude_files = 'PUCore/Sources/Documentation'
-      ss.resource_bundles = { 'PUCore' => ['PUCore/Resources/*.{xcassets}']}
-      ss.resources = ['PUCore/Resources/*.{xcassets}']
+      ss.source_files       = 'PUCore/Sources/PUCore/**/*'
+      ss.exclude_files      = 'PUCore/Sources/Documentation'
+      ss.resource_bundles   = { 'PUCore' => ['PUCore/Resources/*.{xcassets}']}
+      ss.resources          = ['PUCore/Resources/*.{xcassets}']
     end
 
     # s.subspec 'PUMastercardInstallments' do |ss|

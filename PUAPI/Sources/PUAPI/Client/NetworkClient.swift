@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(PUCore)
 import PUCore
+#endif
 
 public protocol NetworkClientProtocol {
   func request<E: NetworkTarget, T: Codable>(target: E, type: T.Type, completionHandler: @escaping (Result<T, Error>) -> Void)

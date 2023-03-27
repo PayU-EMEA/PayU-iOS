@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(PUCore)
 import PUCore
+#endif
 
 public protocol NetworkTarget {
   var path: String { get }
