@@ -6,7 +6,10 @@
 //
 
 import UIKit
+
+#if canImport(PUCore)
 import PUCore
+#endif
 
 open class PUTextField: UITextField {
 

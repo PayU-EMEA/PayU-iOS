@@ -6,8 +6,11 @@
 //
 
 import Kingfisher
-import PUCore
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
 
 public class PUImageView: UIImageView {
 
