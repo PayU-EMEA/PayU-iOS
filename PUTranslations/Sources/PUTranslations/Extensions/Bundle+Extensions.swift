@@ -6,7 +6,10 @@
 //
 
 import Foundation
+
+#if canImport(PUCore)
 import PUCore
+#endif
 
 extension Bundle {
   static func bundle(languageCode: String) -> Bundle {

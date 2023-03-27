@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import PUCore
 
 /// Protocol which allows to define the primary `languageCode` for translations
 public protocol LanguageCodeProvider {

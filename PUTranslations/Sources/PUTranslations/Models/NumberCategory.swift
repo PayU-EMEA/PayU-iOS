@@ -7,8 +7,6 @@
 
 import Foundation
 
-// MARK: - Count
-
 /// Represents which kind of translation to use: ``NumberCategory/singular`` or ``NumberCategory/plural``
 public enum NumberCategory {
 

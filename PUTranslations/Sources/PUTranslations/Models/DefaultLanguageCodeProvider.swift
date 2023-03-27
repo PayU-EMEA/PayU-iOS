@@ -6,8 +6,10 @@
 //
 
 import Foundation
-import PUCore
 
+#if canImport(PUCore)
+import PUCore
+#endif
 
 /// Default provider for language code
 ///
