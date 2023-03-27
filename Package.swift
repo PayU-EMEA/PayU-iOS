@@ -169,6 +169,7 @@ let package = Package(
     .target(
       name: "PUPaymentCardScanner",
       dependencies: [
+        "PUCore",
         "PUTheme",
         "PUTranslations"
       ],

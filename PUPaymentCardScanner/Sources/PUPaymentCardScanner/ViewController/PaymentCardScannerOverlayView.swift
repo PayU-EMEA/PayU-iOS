@@ -5,8 +5,11 @@
 //  Copyright © 2023 PayU S.A. All rights reserved.
 //
 
-import PUTheme
 import UIKit
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
 
 final class PaymentCardScannerOverlayView: UIView {
 

@@ -41,6 +41,18 @@ Pod::Spec.new do |s|
     ss.dependency         'PUSDK/PUTranslations'
   end
 
+  s.subspec 'PUPaymentCardScanner' do |ss|
+    ss.source_files       = 'PUPaymentCardScanner/Sources/PUPaymentCardScanner/**/*'
+    ss.exclude_files      = ['PUPaymentCardScanner/Sources/PUPaymentCardScanner/Documentation.docc']
+    ss.framework          = 'AVFoundation'
+    ss.framework          = 'CoreImage'
+    ss.framework          = 'CoreGraphics'
+    ss.framework          = 'Vision'
+    ss.dependency         'PUSDK/PUCore'
+    ss.dependency         'PUSDK/PUTheme'
+    ss.dependency         'PUSDK/PUTranslations'
+  end
+
   s.subspec 'PUTheme' do |ss|
     ss.source_files       = 'PUTheme/Sources/PUTheme/**/*'
     ss.exclude_files      = 'PUTheme/Sources/PUTheme/*.{docc}'

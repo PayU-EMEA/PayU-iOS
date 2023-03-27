@@ -5,7 +5,9 @@
 //  Copyright © 2023 PayU S.A. All rights reserved.
 //
 
+#if canImport(PUCore)
 import PUCore
+#endif
 
 final class PaymentCardScannerService {
 

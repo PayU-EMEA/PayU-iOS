@@ -8,11 +8,20 @@
 import AVFoundation
 import CoreImage
 import CoreGraphics
-import PUCore
-import PUTheme
-import PUTranslations
 import UIKit
 import Vision
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 /// Protocol which defines the completion result of ``PaymentCardScannerViewController``
 @available(iOS 13.0, *)
@@ -213,7 +222,7 @@ public final class PaymentCardScannerViewController: UIViewController {
 
   private func makeTitleLabel() {
     titleLabel = UILabel()
-    titleLabel.text = "Hello, world!"
+    titleLabel.text = ""
     titleLabel.numberOfLines = 3
     titleLabel.textAlignment = .center
 
