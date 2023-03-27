@@ -5,10 +5,19 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-
 import Foundation
+
+#if canImport(PUCore)
 import PUCore
+#endif
+
+#if canImport(PUTheme)
 import PUTheme
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 struct PaymentMethodsWidgetStateDecoratorFactory {
   func decorator(_ state: PaymentMethodsWidgetState) -> PaymentMethodsWidgetStateDecorator {

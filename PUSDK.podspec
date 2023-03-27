@@ -57,6 +57,15 @@ Pod::Spec.new do |s|
     ss.dependency         'PUSDK/PUTranslations'
   end
 
+  s.subspec 'PUPaymentMethods' do |ss|
+    ss.source_files       = 'PUPaymentMethods/Sources/PUPaymentMethods/**/*'
+    ss.dependency         'PUSDK/PUApplePay'
+    ss.dependency         'PUSDK/PUCore'
+    ss.dependency         'PUSDK/PUPaymentCard'
+    ss.dependency         'PUSDK/PUTheme'
+    ss.dependency         'PUSDK/PUTranslations'
+  end
+
   s.subspec 'PUTheme' do |ss|
     ss.source_files       = 'PUTheme/Sources/PUTheme/**/*'
     ss.dependency         'Kingfisher', '6.3.1'

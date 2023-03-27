@@ -5,7 +5,9 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
+#if canImport(PUCore)
 import PUCore
+#endif
 
 /// Allows to setup the configuration how to display the payment methods
 public struct PaymentMethodsConfiguration: Equatable {

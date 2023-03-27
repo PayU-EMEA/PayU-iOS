@@ -5,8 +5,11 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
 
 protocol PaymentMethodsWidgetViewModelDelegate: AnyObject {
   func viewModel(_ viewModel: PaymentMethodsWidgetViewModel, didUpdateState state: PaymentMethodsWidgetState)

@@ -5,10 +5,23 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
-import PUPaymentCard
-import PUTheme
 import UIKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
+
+#if canImport(PUPaymentCard)
+import PUPaymentCard
+#endif
+
+#if canImport(PUTheme)
+import PUTheme
+#endif
+
+#if canImport(PUTranslations)
+import PUTranslations
+#endif
 
 /// Protocol which defines the completion result of ``PaymentMethodsViewController``
 public protocol PaymentMethodsViewControllerDelegate: AnyObject {

@@ -5,7 +5,9 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
+#if canImport(PUCore)
 import PUCore
+#endif
 
 enum PaymentMethodsWidgetState: Equatable {
   case initial

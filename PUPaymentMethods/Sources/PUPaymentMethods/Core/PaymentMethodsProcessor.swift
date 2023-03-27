@@ -5,9 +5,15 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUApplePay
-import PUCore
 import UIKit
+
+#if canImport(PUApplePay)
+import PUApplePay
+#endif
+
+#if canImport(PUCore)
+import PUCore
+#endif
 
 /// Protocol which defines the behavior for implementation
 public protocol PaymentMethodsProcessorProtocol {

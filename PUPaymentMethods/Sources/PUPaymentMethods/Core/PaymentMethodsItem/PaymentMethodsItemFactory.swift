@@ -5,7 +5,9 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
+#if canImport(PUCore)
 import PUCore
+#endif
 
 protocol PaymentMethodsItemFactoryProtocol {
   func item(_ paymentMethod: PaymentMethod) -> PaymentMethodsItem?
