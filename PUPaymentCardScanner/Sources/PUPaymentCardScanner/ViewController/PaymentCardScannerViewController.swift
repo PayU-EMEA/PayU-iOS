@@ -140,7 +140,7 @@ public final class PaymentCardScannerViewController: UIViewController {
 
   // MARK: - Private Methods
   private func setupNavigationBar() {
-    navigationItem.titleView = PULogoView()
+    navigationItem.titleView = PUImageView(brandImageProvider: .logo)
     navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back".localized(), style: .plain, target: self, action: #selector(actionBack(_:)))
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "   ", style: .plain, target: self, action: nil)
     navigationItem.leftBarButtonItem?.tintColor = PUTheme.theme.colorTheme.primary2

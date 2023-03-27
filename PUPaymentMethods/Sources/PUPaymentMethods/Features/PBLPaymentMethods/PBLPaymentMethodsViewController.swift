@@ -73,7 +73,7 @@ final class PBLPaymentMethodsViewController: UICollectionViewController {
 
   // MARK: - Private Methods
   private func setupBasics() {
-    navigationItem.titleView = PULogoView()
+    navigationItem.titleView = PUImageView(brandImageProvider: .logo)
     view.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     collectionView.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     collectionView.register(PBLPaymentMethodsCell.self, forCellWithReuseIdentifier: identifier)

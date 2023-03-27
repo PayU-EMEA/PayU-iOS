@@ -92,7 +92,7 @@ public final class OfferViewController: UIViewController {
     navigationController?.navigationBar.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     navigationController?.view.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     view.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
-    navigationItem.titleView = PULogoView()
+    navigationItem.titleView = PUImageView(brandImageProvider: .logo)
 
     let stackView = UIStackView()
     stackView.axis = .vertical

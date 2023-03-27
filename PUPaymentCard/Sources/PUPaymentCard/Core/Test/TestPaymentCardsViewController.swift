@@ -62,7 +62,7 @@ final class TestPaymentCardsViewController: UITableViewController {
 
   // MARK: - Private Methods
   private func setupBasics() {
-    navigationItem.titleView = PULogoView()
+    navigationItem.titleView = PUImageView(brandImageProvider: .logo)
     tableView.register(TestPaymentCardCell.self, forCellReuseIdentifier: identifier)
     tableView.estimatedRowHeight = 80.0
     tableView.rowHeight = UITableView.automaticDimension

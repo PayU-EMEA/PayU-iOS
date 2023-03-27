@@ -204,7 +204,9 @@ private extension PaymentMethodsWidget {
     paymentMethodHorizontalStackView.distribution = .fill
     paymentMethodHorizontalStackView.spacing = 8.0
 
-    let logoImageView = PULogoView()
+    let logoImageView = PUImageView(brandImageProvider: .logo)
+    logoImageView.heightAnchor.constraint(equalToConstant: 48.0).isActive = true
+    logoImageView.widthAnchor.constraint(equalToConstant: 48.0).isActive = true
     paymentMethodHorizontalStackView.addArrangedSubview(logoImageView)
 
     let verticalDividerView = UIView()

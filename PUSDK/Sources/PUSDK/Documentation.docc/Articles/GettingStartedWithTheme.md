@@ -42,5 +42,4 @@ This package provides classes, structures, views extensions to allow merchants t
 - ``PUTextButton``
 - ``PUImageView``
 - ``PULabel``
-- ``PULogoView``
 - ``PUTextField``

@@ -62,7 +62,7 @@ final class OptionsViewController: UITableViewController {
 
   // MARK: - Private Methods
   private func setupBasics() {
-    navigationItem.titleView = PULogoView()
+    navigationItem.titleView = PUImageView(brandImageProvider: .logo)
     view.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     tableView.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     tableView.register(OptionsCell.self, forCellReuseIdentifier: identifier)

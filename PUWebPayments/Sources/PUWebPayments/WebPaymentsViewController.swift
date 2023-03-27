@@ -108,7 +108,7 @@ public final class WebPaymentsViewController: UIViewController {
     navigationController?.navigationBar.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     navigationController?.view.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
     view.backgroundColor = PUTheme.theme.colorTheme.secondaryGray4
-    navigationItem.titleView = PULogoView()
+    navigationItem.titleView = PUImageView(brandImageProvider: .logo)
 
     let verticalStackView = UIStackView()
     verticalStackView.axis = .vertical

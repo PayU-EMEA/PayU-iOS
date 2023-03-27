@@ -42,7 +42,7 @@ Then choose Package Products you want to use:
 
 ### CocoaPods
 
-// TODO: - Add ability to install via CocoaPods
+* `pod 'PUSDK', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
 
 ## Example
 
