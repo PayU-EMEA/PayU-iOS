@@ -8,7 +8,7 @@
 import Foundation
 
 func decode<T: Decodable>(type: T.Type, from file: String) -> T {
-  let url = Bundle.module.url(forResource: file, withExtension: "json")!
+  let url = Bundle.current(.PUMastercardInstallmentsTests).url(forResource: file, withExtension: "json")!
   let data = try! Data(contentsOf: url)
   return try! JSONDecoder().decode(type, from: data)
 }

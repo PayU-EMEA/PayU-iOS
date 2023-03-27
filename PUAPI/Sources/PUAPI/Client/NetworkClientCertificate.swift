@@ -7,13 +7,16 @@
 
 import Foundation
 import Security
+import PUCore
 
 struct NetworkClientCertificate {
 
   // MARK: - Certificates
   static func certificate(name: String) -> NetworkClientCertificate? {
     guard
-      let file = Bundle.module.url(forResource: name, withExtension: "cer"),
+      let file = Bundle
+        .current(.PUAPI)
+        .url(forResource: name, withExtension: "cer"),
       let data = try? Data(contentsOf: file)
     else { return nil }
 

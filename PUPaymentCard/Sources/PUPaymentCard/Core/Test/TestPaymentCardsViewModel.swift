@@ -31,7 +31,9 @@ final class TestPaymentCardsViewModel {
   // MARK: - Initialization
   init() {
     guard
-      let path = Bundle.module.path(forResource: "cards", ofType: "json"),
+      let path = Bundle
+        .current(.PUPaymentCard)
+        .path(forResource: "cards", ofType: "json"),
       let data = FileManager.default.contents(atPath: path),
       let cards = try? JSONDecoder().decode([TestPaymentCard].self, from: data)
     else {

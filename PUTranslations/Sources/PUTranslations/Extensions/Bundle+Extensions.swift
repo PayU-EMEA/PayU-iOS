@@ -6,13 +6,15 @@
 //
 
 import Foundation
+import PUCore
 
 extension Bundle {
   static func bundle(languageCode: String) -> Bundle {
-    guard let path = Bundle.module.path(
+    let currentBundle = Bundle.current(.PUTranslations)
+    guard let path = currentBundle.path(
       forResource: languageCode,
       ofType: "lproj")
-    else { return .module }
-    return Bundle(path: path) ?? .module
+    else { return currentBundle }
+    return Bundle(path: path) ?? currentBundle
   }
 }

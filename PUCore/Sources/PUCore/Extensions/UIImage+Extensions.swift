@@ -25,7 +25,7 @@ public extension UIImage {
   static func asset(_ name: String, renderingMode: UIImage.RenderingMode = .alwaysTemplate) -> UIImage? {
     UIImage(
       named: name,
-      in: .module,
+      in: .current(.PUCore),
       compatibleWith: nil)?
       .withRenderingMode(renderingMode)
   }
