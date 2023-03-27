@@ -15,40 +15,42 @@ import PUAPI
 import PUCore
 #endif
 
-struct Assembler {
+struct PUThreeDS {
+  struct Assembler {
 
-  func makeComponents() -> SoftAcceptComponents {
-    SoftAcceptComponents()
-  }
+    func makeComponents() -> SoftAcceptComponents {
+      SoftAcceptComponents()
+    }
 
-  func makeConfiguration() -> SoftAcceptConfiguration {
-    SoftAcceptConfiguration
-      .Factory(environment: PayU.pos.environment)
-      .make()
-  }
+    func makeConfiguration() -> SoftAcceptConfiguration {
+      SoftAcceptConfiguration
+        .Factory(environment: PayU.pos.environment)
+        .make()
+    }
 
-  func makeNetworkClient() -> NetworkClient {
-    NetworkClient.Factory().make()
-  }
+    func makeNetworkClient() -> NetworkClient {
+      NetworkClient.Factory().make()
+    }
 
-  func makeQueryParameterExtractor() -> SoftAcceptQueryParameterExtractor {
-    SoftAcceptQueryParameterExtractor()
-  }
+    func makeQueryParameterExtractor() -> SoftAcceptQueryParameterExtractor {
+      SoftAcceptQueryParameterExtractor()
+    }
 
-  func makeRepository() -> SoftAcceptRepository {
-    SoftAcceptRepository(client: makeNetworkClient())
-  }
+    func makeRepository() -> SoftAcceptRepository {
+      SoftAcceptRepository(client: makeNetworkClient())
+    }
 
-  func makeService() -> SoftAcceptService {
-    SoftAcceptService(
-      components: makeComponents(),
-      configuration: makeConfiguration(),
-      extractor: makeQueryParameterExtractor(),
-      repository: makeRepository(),
-      urlModifier: makeUrlModifier())
-  }
+    func makeService() -> SoftAcceptService {
+      SoftAcceptService(
+        components: makeComponents(),
+        configuration: makeConfiguration(),
+        extractor: makeQueryParameterExtractor(),
+        repository: makeRepository(),
+        urlModifier: makeUrlModifier())
+    }
 
-  func makeUrlModifier() -> SoftAcceptUrlModifier {
-    SoftAcceptUrlModifier()
+    func makeUrlModifier() -> SoftAcceptUrlModifier {
+      SoftAcceptUrlModifier()
+    }
   }
 }

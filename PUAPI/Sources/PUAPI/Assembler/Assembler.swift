@@ -11,30 +11,32 @@ import Foundation
 import PUCore
 #endif
 
-struct Assembler {
+struct PUAPI {
+  struct Assembler {
 
-  func makeNetworkClientConfiguration() -> NetworkClientConfiguration {
-    NetworkClientConfiguration(environment: PayU.pos.environment)
-  }
+    func makeNetworkClientConfiguration() -> NetworkClientConfiguration {
+      NetworkClientConfiguration(environment: PayU.pos.environment)
+    }
 
-  func makeNetworkClientAuthenticationChallengeHandler() -> NetworkClientAuthenticationChallengeHandler {
-    NetworkClientAuthenticationChallengeHandler(configuration: makeNetworkClientConfiguration())
-  }
+    func makeNetworkClientAuthenticationChallengeHandler() -> NetworkClientAuthenticationChallengeHandler {
+      NetworkClientAuthenticationChallengeHandler(configuration: makeNetworkClientConfiguration())
+    }
 
-  func makeNetworkClient() -> NetworkClient {
-    NetworkClient(
-      networkClientConfiguration: makeNetworkClientConfiguration(),
-      session: makeSession())
-  }
+    func makeNetworkClient() -> NetworkClient {
+      NetworkClient(
+        networkClientConfiguration: makeNetworkClientConfiguration(),
+        session: makeSession())
+    }
 
-  func makeSession() -> URLSession {
-    URLSession(
-      configuration: makeSessionConfiguration(),
-      delegate: makeNetworkClientAuthenticationChallengeHandler(),
-      delegateQueue: nil)
-  }
+    func makeSession() -> URLSession {
+      URLSession(
+        configuration: makeSessionConfiguration(),
+        delegate: makeNetworkClientAuthenticationChallengeHandler(),
+        delegateQueue: nil)
+    }
 
-  func makeSessionConfiguration() -> URLSessionConfiguration {
-    URLSessionConfiguration.default
+    func makeSessionConfiguration() -> URLSessionConfiguration {
+      URLSessionConfiguration.default
+    }
   }
 }

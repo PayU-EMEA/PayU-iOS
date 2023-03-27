@@ -36,14 +36,11 @@ public final class SoftAcceptService: NSObject, WKScriptMessageHandler {
   public struct Factory {
 
     // MARK: - Private Properties
-    private let assembler: Assembler
+    private let assembler = PUThreeDS.Assembler()
 
     // MARK: - Initialization
-    public init() {
-      self.assembler = Assembler()
-    }
+    public init() {  }
 
-    // MARK: - Public Methods
     // MARK: - Public Methods
     /// Returns default implementation for ``SoftAcceptService``
     /// - Returns: Default implementation for ``SoftAcceptService``
