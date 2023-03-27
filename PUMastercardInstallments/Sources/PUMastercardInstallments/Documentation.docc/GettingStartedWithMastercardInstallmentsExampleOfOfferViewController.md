@@ -10,7 +10,6 @@ Before you start working with this package, please visit [developers.payu.com](h
 
 ```swift
 import UIKit
-import PUCore
 import PUMastercardInstallments
 
 class AwesomeViewController: UIViewController {

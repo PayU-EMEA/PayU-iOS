@@ -6,9 +6,18 @@
 //
 
 import UIKit
+
+#if canImport(PUCore)
 import PUCore
+#endif
+
+#if canImport(PUTheme)
 import PUTheme
+#endif
+
+#if canImport(PUTranslations)
 import PUTranslations
+#endif
 
 /// Protocol which defines the completion result of ``OfferViewController``
 public protocol OfferViewControllerDelegate: AnyObject {

@@ -6,8 +6,14 @@
 //
 
 import Foundation
+
+#if canImport(PUCore)
 import PUCore
+#endif
+
+#if canImport(PUTranslations)
 import PUTranslations
+#endif
 
 protocol OptionsFactoryProtocol {
   func items(proposal: InstallmentProposal) -> [OptionsItem]
