@@ -38,11 +38,15 @@ To add a package dependency to your Xcode project, select File > Add Packages. Y
 Then choose Package Products you want to use:
 
 * `PUSDK` - when you want to use the whole Package (Apple Pay, Payment Methods, Web Payments, etc.)
-* Any Other - when you want to use just one special Package
+* `{PackageName}` - when you want to use just one special Package
 
 ### CocoaPods
 
+When you want to use the whole Package (Apple Pay, Payment Methods, Web Payments, etc.)
 * `pod 'PUSDK', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
+
+When you want to use just one special Package
+* `pod 'PUSDK/{PackageName}' , :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
 
 ## Example
 
