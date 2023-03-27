@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.subspec 'PUAPI' do |ss|
     ss.source_files       = 'PUAPI/Sources/PUAPI/**/*'
     ss.exclude_files      = 'PUAPI/Sources/PUAPI/*.{docc}'
-    ss.resource_bundles   = { 'PUAPI' => ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']}
+    ss.resource_bundles   = {'PUAPI' => ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']}
     ss.resources          = ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']
     ss.dependency         'PUSDK/PUCore'
   end
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.subspec 'PUCore' do |ss|
     ss.source_files       = 'PUCore/Sources/PUCore/**/*'
     ss.exclude_files      = 'PUCore/Sources/PUCore/*.{docc}'
-    ss.resource_bundles   = { 'PUCore' => ['PUCore/Resources/*.{xcassets}']}
+    ss.resource_bundles   = {'PUCore' => ['PUCore/Resources/*.{xcassets}']}
     ss.resources          = ['PUCore/Resources/*.{xcassets}']
   end
 
@@ -45,6 +45,14 @@ Pod::Spec.new do |s|
     ss.exclude_files      = 'PUTheme/Sources/PUThreeDS/*.{docc}'
     ss.framework          = 'WebKit'
     ss.dependency         'PUSDK/PUAPI'
+    ss.dependency         'PUSDK/PUCore'
+  end
+
+  s.subspec 'PUTranslations' do |ss|
+    ss.source_files       = 'PUTranslations/Sources/PUTranslations/**/*'
+    ss.exclude_files      = ['PUTranslations/Sources/PUTranslations/*.{docc}']
+    ss.resource_bundles   = {'PUTranslations' => ['PUTranslations/Sources/PUTranslations/Resources/*.{lproj}']}
+    ss.resources          = ['PUTranslations/Sources/PUTranslations/Resources/*.{lproj}']
     ss.dependency         'PUSDK/PUCore'
   end
 
