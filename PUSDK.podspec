@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'PUAPI' do |ss|
       ss.source_files       = 'PUAPI/Sources/PUAPI/**/*'
-      ss.exclude_files      = ['PUAPI/Sources/*.{docc}']
+      ss.exclude_files      = 'PUAPI/Sources/*.{docc}'
       ss.resource_bundles   = { 'PUAPI' => ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']}
       ss.resources          = ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']
       ss.dependency         'PUSDK/PUCore'
@@ -22,19 +22,19 @@ Pod::Spec.new do |s|
 
     s.subspec 'PUApplePay' do |ss|
         ss.source_files       = 'PUApplePay/Sources/PUApplePay/**/*'
-        ss.exclude_files      = ['PUApplePay/Sources/*.{docc}']
+        ss.exclude_files      = 'PUApplePay/Sources/*.{docc}'
         ss.framework          = 'PassKit'
     end
 
     s.subspec 'PUCore' do |ss|
       ss.source_files       = 'PUCore/Sources/PUCore/**/*'
-      ss.exclude_files      = ['PUCore/Sources/*.{docc}']
+      ss.exclude_files      = 'PUCore/Sources/*.{docc}'
       ss.resource_bundles   = { 'PUCore' => ['PUCore/Resources/*.{xcassets}']}
       ss.resources          = ['PUCore/Resources/*.{xcassets}']
     end
 
     s.subspec 'PUTheme' do |ss|
         ss.source_files       = 'PUTheme/Sources/PUTheme/**/*'
-        ss.exclude_files      = ['PUTheme/Sources/*.{docc}']
+        ss.exclude_files      = 'PUTheme/Sources/*.{docc}'
     end
 end
