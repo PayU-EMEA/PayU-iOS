@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'PUAPI' do |ss|
       ss.source_files       = 'PUAPI/Sources/PUAPI/**/*'
-      ss.exclude_files      = 'PUAPI/Sources/Documentation.docc'
+      ss.exclude_files      = ['PUAPI/Sources/*.{docc}']
       ss.resource_bundles   = { 'PUAPI' => ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']}
       ss.resources          = ['PUAPI/Sources/PUAPI/Certificates/*.{cer}']
       ss.dependency         'PUSDK/PUCore'
@@ -22,70 +22,19 @@ Pod::Spec.new do |s|
 
     s.subspec 'PUApplePay' do |ss|
         ss.source_files       = 'PUApplePay/Sources/PUApplePay/**/*'
-        ss.exclude_files      = 'PUApplePay/Sources/Documentation.docc'
+        ss.exclude_files      = ['PUApplePay/Sources/*.{docc}']
         ss.framework          = 'PassKit'
     end
 
     s.subspec 'PUCore' do |ss|
       ss.source_files       = 'PUCore/Sources/PUCore/**/*'
-      ss.exclude_files      = 'PUAPI/Sources/Documentation.docc'
+      ss.exclude_files      = ['PUCore/Sources/*.{docc}']
       ss.resource_bundles   = { 'PUCore' => ['PUCore/Resources/*.{xcassets}']}
       ss.resources          = ['PUCore/Resources/*.{xcassets}']
     end
 
-    # s.subspec 'PUMastercardInstallments' do |ss|
-    #   ss.source_files = 'PUMastercardInstallments/Sources/PUMastercardInstallments/**/*'
-    #   ss.dependency 'PUSDK/PUCore'
-    #   ss.dependency 'PUSDK/PUTheme'
-    #   ss.dependency 'PUSDK/PUTranslations'
-    # end
-
-    # s.subspec 'PUPaymentCard' do |ss|
-    #   ss.source_files = 'PUPaymentCard/Sources/PUPaymentCard/**/*'
-    #   ss.dependency 'PUSDK/PUAPI'
-    #   ss.dependency 'PUSDK/PUCore'
-    #   ss.dependency 'PUSDK/PUPaymentCardScanner'
-    #   ss.dependency 'PUSDK/PUTheme'
-    #   ss.dependency 'PUSDK/PUTranslations'
-    # end
-
-    # s.subspec 'PUPaymentCardScanner' do |ss|
-    #   ss.source_files = 'PUPaymentCardScanner/Sources/PUPaymentCardScanner/**/*'
-    #   ss.dependency 'PUSDK/PUTheme'
-    #   ss.dependency 'PUSDK/PUTranslations'
-    # end
-
-    # s.subspec 'PUPaymentMethods' do |ss|
-    #   ss.source_files = 'PUPaymentMethods/Sources/PUPaymentMethods/**/*'
-    #   ss.dependency 'PUSDK/PUApplePay'
-    #   ss.dependency 'PUSDK/PUCore'
-    #   ss.dependency 'PUSDK/PUPaymentCard'
-    #   ss.dependency 'PUSDK/PUTheme'
-    #   ss.dependency 'PUSDK/PUTranslations'
-    # end
-
-    # s.subspec 'PUTheme' do |ss|
-    #   ss.source_files = 'PUTheme/Sources/PUTheme/**/*'
-    #   ss.dependency 'PUSDK/PUCore'
-    #   ss.dependency 'Kingfisher', '6.3.1'
-    # end
-
-    # s.subspec 'PUThreeDS' do |ss|
-    #   ss.source_files = 'PUThreeDS/Sources/PUThreeDS/**/*'
-    #   ss.dependency 'PUSDK/PUAPI'
-    #   ss.dependency 'PUSDK/PUCore'
-    #   ss.dependency 'PUSDK/PUTheme'
-    # end
-
-    # s.subspec 'PUTranslations' do |ss|
-    #   ss.source_files = 'PUTranslations/Sources/PUTranslations/**/*'
-    #   ss.dependency 'PUSDK/PUCore'
-    # end
-
-    # s.subspec 'PUWebPayments' do |ss|
-    #   ss.source_files = 'PUWebPayments/Sources/PUWebPayments/**/*'
-    #   ss.dependency 'PUSDK/PUTheme'
-    #   ss.dependency 'PUSDK/PUTranslations'
-    # end
-
+    s.subspec 'PUTheme' do |ss|
+        ss.source_files       = 'PUTheme/Sources/PUTheme/**/*'
+        ss.exclude_files      = ['PUTheme/Sources/*.{docc}']
+    end
 end
