@@ -5,7 +5,6 @@ An example on how to interact with SoftAcceptService
 ## Example
 
 ```swift
-import PUCore
 import PUThreeDS
 import UIKit
 

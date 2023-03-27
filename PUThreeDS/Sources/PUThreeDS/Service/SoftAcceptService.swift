@@ -6,8 +6,11 @@
 //
 
 import Foundation
-import PUCore
 import WebKit
+
+#if canImport(PUCore)
+import PUCore
+#endif
 
 /// Implementing this protocol, you'll receive the callbacks from ``SoftAcceptService``
 public protocol SoftAcceptServiceDelegate: AnyObject {

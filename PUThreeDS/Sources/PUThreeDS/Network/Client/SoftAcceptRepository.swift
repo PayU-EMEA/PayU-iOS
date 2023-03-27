@@ -6,7 +6,10 @@
 //
 
 import Foundation
+
+#if canImport(PUAPI)
 import PUAPI
+#endif
 
 protocol SoftAcceptRepositoryProtocol {
   func create(log: SoftAcceptLog, completionHandler: @escaping (Result<SoftAcceptResponse, Error>) -> Void)

@@ -224,7 +224,6 @@ let package = Package(
       dependencies: [
         "PUAPI",
         "PUCore",
-        "PUTheme"
       ],
       path: "PUThreeDS"
     ),
