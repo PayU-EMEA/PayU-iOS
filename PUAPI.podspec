@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
     s.source        = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
     s.source_files  = 'PUAPI/Sources/PUAPI/**/*'
 
-    s.dependency 'PUCore', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'
+    # s.dependency 'PUCore', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'
+    s.dependency 'PUCore', :local => '../PUCore'
 end
