@@ -6,7 +6,9 @@ Pod::Spec.new do |s|
 
   s.platform              = :ios
   s.ios.deployment_target = '11.0'
-  s.ios.resource_bundles  = 'PUAPI/Resources/Media.xcassets'
+
+  s.resource_bundles = { 'PUCore' => ['PUCore/Resources/*.{xcassets}']}
+  s.resources = ['PUCore/Resources/*.{xcassets}']
 
   s.author  = { 'PayU' => 'itsupport@payu.pl' }
   s.license = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
