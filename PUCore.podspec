@@ -1,19 +1,16 @@
 Pod::Spec.new do |s|  
-    s.name              = 'PUCore'
-    s.version           = '2.0.0-alpha'
-    s.summary           = 'PayU mobile SDK for iOS'
-    s.homepage          = 'http://developers.payu.com/en/mobile_sdk.html'
+  s.name    = 'PUCore'
+  s.version   = '2.0.0-alpha'
+  s.summary   = 'PayU mobile SDK for iOS'
+  s.homepage  = 'http://developers.payu.com/en/mobile_sdk.html'
 
-    s.author            = { 'PayU' => 'itsupport@payu.pl' }
-    s.license           = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
+  s.platform              = :ios
+  s.ios.deployment_target = '11.0'
 
-    s.platform          = :ios
-    s.source            = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
+  s.author  = { 'PayU' => 'itsupport@payu.pl' }
+  s.license = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
 
-    s.ios.deployment_target = '11.0'
-
-    s.subspec 'PUCore' do |ss|
-      ss.source_files = 'PUCore/Sources/PUCore/**/*'
-    end
-
+  
+  s.source        = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
+  s.source_files  = 'PUCore/Sources/PUCore/**/*'
 end
