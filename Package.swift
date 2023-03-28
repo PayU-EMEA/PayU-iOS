@@ -209,6 +209,9 @@ let package = Package(
         "Kingfisher"
       ],
       path: "PUTheme",
+      resources: [
+        .process("../PUTheme/Sources/PUTheme/Resources")
+      ],
       linkerSettings: [
         .linkedFramework(
           "UIKit",

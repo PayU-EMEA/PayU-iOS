@@ -68,6 +68,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'PUTheme' do |ss|
     ss.source_files       = 'PUTheme/Sources/PUTheme/**/*'
+    ss.resource_bundles   = {'PUTheme' => ['PUTheme/Sources/PUTheme/Resources/Fonts/*.{ttf}']}
+    ss.resources          = ['PUTheme/Sources/PUTheme/Resources/Fonts/*.{ttf}']
     ss.dependency         'Kingfisher', '6.3.1'
     ss.dependency         'PUSDK/PUCore'
   end

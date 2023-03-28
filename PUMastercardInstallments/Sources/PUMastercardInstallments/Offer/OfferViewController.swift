@@ -103,7 +103,7 @@ public final class OfferViewController: UIViewController {
     stackView.pinToSuperviewTop(withConstant: 16.0)
     stackView.pinToSuperviewRight(withConstant: -16.0)
 
-    let transactionApprovedLabel = PULabel(style: PUTheme.theme.textTheme.bodyText1.copyWith(fontWeight: .bold))
+    let transactionApprovedLabel = PULabel(style: PUTheme.theme.textTheme.bodyText1)
     transactionApprovedLabel.text = "transaction_approved".localized()
     transactionApprovedLabel.numberOfLines = 0
     stackView.addArrangedSubview(transactionApprovedLabel)

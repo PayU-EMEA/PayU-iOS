@@ -24,9 +24,7 @@ extension UIButton {
 extension UILabel {
   public func apply(style: PUTheme.TextTheme.Style) {
     self.textColor = style.color
-    self.font = UIFont.systemFont(
-      ofSize: style.fontSize,
-      weight: style.fontWeight)
+    self.font = style.font
   }
 }
 
@@ -39,9 +37,7 @@ extension PUTextField {
     borderLayer.masksToBounds = true
 
     self.textColor = style.textStyle.color
-    self.font = UIFont.systemFont(
-      ofSize: style.textStyle.fontSize,
-      weight: style.textStyle.fontWeight)
+    self.font = style.textStyle.font
   }
 }
 

@@ -75,18 +75,14 @@ public final class TermsAndConditionsView: UIView {
   private func makePrefixAttributes() -> [NSAttributedString.Key : Any] {
     return [
       .foregroundColor: PUTheme.theme.textTheme.caption.color,
-      .font: UIFont.systemFont(
-        ofSize: PUTheme.theme.textTheme.caption.fontSize,
-        weight: PUTheme.theme.textTheme.caption.fontWeight),
+      .font: PUTheme.theme.textTheme.caption.font
     ]
   }
 
   private func makeSuffixAttributes() -> [NSAttributedString.Key : Any] {
     return [
       .foregroundColor: PUTheme.theme.colorTheme.primary2,
-      .font: UIFont.systemFont(
-        ofSize: PUTheme.theme.textTheme.caption.fontSize,
-        weight: PUTheme.theme.textTheme.caption.fontWeight),
+      .font: PUTheme.theme.textTheme.caption.font,
     ]
   }
 }

@@ -16,6 +16,7 @@ public extension Foundation.Bundle {
     case PUAPI = "PUAPI"
     case PUCore = "PUCore"
     case PUPaymentCard = "PUPaymentCard"
+    case PUTheme = "PUTheme"
     case PUTranslations = "PUTranslations"
 
     case PUCoreTests = "PUCoreTests"

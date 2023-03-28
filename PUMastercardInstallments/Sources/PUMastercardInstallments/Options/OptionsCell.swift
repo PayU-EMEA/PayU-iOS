@@ -19,9 +19,9 @@ final class OptionsCell: UITableViewCell {
 
   // MARK: - Private Properties
   private let iconImageView = PUImageView()
-  private let titleLabel = PULabel(style: PUTheme.theme.textTheme.bodyText1.copyWith(fontWeight: .bold))
+  private let titleLabel = PULabel(style: PUTheme.theme.textTheme.bodyText1)
   private let accessoryPrefixLabel = PULabel(style: PUTheme.theme.textTheme.bodyText2)
-  private let accessoryTitleLabel = PULabel(style: PUTheme.theme.textTheme.bodyText1.copyWith(fontWeight: .bold))
+  private let accessoryTitleLabel = PULabel(style: PUTheme.theme.textTheme.bodyText1)
   private let accessorySubtitleLabel = PULabel(style: PUTheme.theme.textTheme.bodyText2)
 
   // MARK: - Initialization

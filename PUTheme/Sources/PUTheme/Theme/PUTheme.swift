@@ -464,22 +464,19 @@ public struct PUTheme {
 
   // MARK: - TextTheme
   public struct TextTheme {
+
+    // MARK: - Style
     public struct Style {
 
       // MARK: - Public Properties
       public let color: UIColor
-      public let fontSize: CGFloat
-      public let fontWeight: UIFont.Weight
+      public let font: UIFont
 
       // MARK: - Public Methods
-      public func copyWith(
-        color: UIColor? = nil,
-        fontWeight: UIFont.Weight? = nil
-      ) -> Style {
+      public func copyWith(color: UIColor) -> Style {
         return Self.init(
-          color: color ?? self.color,
-          fontSize: fontSize,
-          fontWeight: fontWeight ?? self.fontWeight)
+          color: color,
+          font: font)
       }
 
       // MARK: - Builder
@@ -487,8 +484,7 @@ public struct PUTheme {
 
         // MARK: - Private Properties
         private var color: UIColor!
-        private var fontSize: CGFloat!
-        private var fontWeight: UIFont.Weight = .regular
+        private var font: UIFont!
 
         // MARK: - Initialization
         public init() {  }
@@ -499,21 +495,15 @@ public struct PUTheme {
           return self
         }
 
-        public func fontSize(_ value: CGFloat) -> Self {
-          self.fontSize = value
-          return self
-        }
-
-        public func fontWeight(_ value: UIFont.Weight) -> Self {
-          self.fontWeight = value
+        public func font(_ value: UIFont) -> Self {
+          self.font = value
           return self
         }
 
         public func build() -> Style {
           return Style(
             color: color,
-            fontSize: fontSize,
-            fontWeight: fontWeight)
+            font: font)
         }
       }
     }
@@ -534,14 +524,62 @@ public struct PUTheme {
       // MARK: - Private Properties
       private let colorTheme: ColorTheme
 
-      private lazy var headline6 = TextTheme.Style.Builder().color(colorTheme.secondaryGray1).fontSize(24.0).build()
-      private lazy var subtitle1 = TextTheme.Style.Builder().color(colorTheme.secondaryGray1).fontSize(16.0).build()
-      private lazy var subtitle2 = TextTheme.Style.Builder().color(colorTheme.secondaryGray1).fontSize(14.0).build()
-      private lazy var bodyText1 = TextTheme.Style.Builder().color(colorTheme.secondaryGray1).fontSize(16.0).build()
-      private lazy var bodyText2 = TextTheme.Style.Builder().color(colorTheme.secondaryGray2).fontSize(14.0).build()
-      private lazy var caption = TextTheme.Style.Builder().color(colorTheme.secondaryGray2).fontSize(14.0).build()
-      private lazy var button = TextTheme.Style.Builder().color(colorTheme.secondaryGray3).fontSize(14.0).build()
-      private lazy var overline = TextTheme.Style.Builder().color(colorTheme.secondaryGray1).fontSize(12.0).build()
+      private lazy var headline6 = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray1)
+        .font(.defaultFont(size: 24.0, weight: .regular))
+        .build()
+
+      private lazy var subtitle1 = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray1)
+        .font(.defaultFont(size: 16.0, weight: .regular))
+        .build()
+
+      private lazy var subtitle2 = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray1)
+        .font(.defaultFont(size: 14.0, weight: .regular))
+        .build()
+
+      private lazy var bodyText1 = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray1)
+        .font(.defaultFont(size: 16.0, weight: .regular))
+        .build()
+
+      private lazy var bodyText2 = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray2)
+        .font(.defaultFont(size: 14.0, weight: .regular))
+        .build()
+
+      private lazy var caption = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray2)
+        .font(.defaultFont(size: 14.0, weight: .regular))
+        .build()
+
+      private lazy var button = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray3)
+        .font(.defaultFont(size: 14.0, weight: .regular))
+        .build()
+
+      private lazy var overline = TextTheme
+        .Style
+        .Builder()
+        .color(colorTheme.secondaryGray1)
+        .font(.defaultFont(size: 12.0, weight: .regular))
+        .build()
+
 
       // MARK: - Public Methods
       public init(_ colorTheme: ColorTheme) {
@@ -622,7 +660,9 @@ public struct PUTheme {
     private lazy var textTheme = PUTheme.TextTheme.Builder(colorTheme).build()
 
     // MARK: - Initialization
-    public init() {  }
+    public init() {
+      UIFont.registerFonts()
+    }
 
     // MARK: - Public Methods
     public func buttonTheme(_ value: ElevatedButtonTheme) -> Self {
