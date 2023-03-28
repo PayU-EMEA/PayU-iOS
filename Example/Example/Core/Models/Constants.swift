@@ -14,10 +14,10 @@ public struct Constants {
   }
 
   public struct Buyer {
-    public static let email = "anton.ivashyna@payu.com"
-    public static let phone = "+48792667087"
-    public static let firstName = "Anton"
-    public static let lastName = "Ivashyna"
+    public static let email = "email@payu.com"
+    public static let phone = "+48123456789"
+    public static let firstName = "John"
+    public static let lastName = "Doe"
     public static let language = Constants.Locale.defaultLanguageCode
     public static let extCustomerId = "214142532"
   }
@@ -25,7 +25,7 @@ public struct Constants {
   public struct Order {
     public static let customerIP = "127.0.0.1"
     public static let continueUrl = "https://www.payu.com/"
-    public static let description = "PayU Swift"
+    public static let description = "PUSDK"
   }
 
   public struct Locale {

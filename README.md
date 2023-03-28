@@ -8,9 +8,9 @@ Allows to make payments in PayU ecosystem.
 
 ## Getting Started
 
-* [Backend Integration](https://developers.payu.com/en/restapi.html)
+* [Payment Flow](https://developers.payu.com/en/mobile_sdk.html)
 * [Mobile Integration](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/)
-* ❗️[Communication](https://developers.payu.com/en/mobile_sdk.html)
+* [Backend Integration](https://developers.payu.com/en/restapi.html)
 
 ## [PUSDK](https://payu-emea.github.io/PayU-iOS/documentation/pusdk) consists of:
 
@@ -42,12 +42,14 @@ Then choose Package Products you want to use:
 
 ### CocoaPods
 
-When you want to use the whole Package (Apple Pay, Payment Methods, Web Payments, etc.)
 * `pod 'PUSDK', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
-
-When you want to use just one special Package
 * `pod 'PUSDK/{PackageName}' , :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
 
 ## Example
 
-// TODO: - Write the STR how to run the example app.
+The SDK contains the `Example` project, where you can find examlpe of how to imppement different feature, such as: [PUApplePay](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithapplepay), [PUPaymentCard](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithpaymentcard), [PUPaymentMethods](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithpaymentmethods), etc. 
+
+1. Clone git repo: `git clone https://github.com/PayU-EMEA/PayU-iOS/tree/release/2.0.0-alpha`
+2. Open: `PayU-iOS/Example/Example.xcodeproj`
+3. Update: `Example/Core/Models/Constants.swift`
+4. Once you run the app, add your POS details: `Settings -> Environment -> Create -> (Enter POS details) -> Save`
