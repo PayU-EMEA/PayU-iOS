@@ -33,7 +33,7 @@ To add a package dependency to your Xcode project, select File > Add Packages. Y
 
 * Package URL: `https://github.com/PayU-EMEA/PayU-iOS.git`
 * Dependency Rule: `Branch`
-* Branch: `release/2.0.0-alpha`
+* Branch: `release/2.0.0`
 
 Then choose Package Products you want to use:
 
@@ -42,14 +42,14 @@ Then choose Package Products you want to use:
 
 ### CocoaPods
 
-* `pod 'PUSDK', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
-* `pod 'PUSDK/{PackageName}' , :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha'`
+* `pod 'PUSDK', :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0'`
+* `pod 'PUSDK/{PackageName}' , :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0'`
 
 ## Example
 
 The SDK contains the `Example` project, where you can find examlpe of how to imppement different feature, such as: [PUApplePay](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithapplepay), [PUPaymentCard](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithpaymentcard), [PUPaymentMethods](https://payu-emea.github.io/PayU-iOS/documentation/pusdk/gettingstartedwithpaymentmethods), etc. 
 
-1. Clone git repo: `git clone https://github.com/PayU-EMEA/PayU-iOS/tree/release/2.0.0-alpha`
+1. Clone git repo: `git clone https://github.com/PayU-EMEA/PayU-iOS/tree/release/2.0.0`
 2. Open: `PayU-iOS/Example/Example.xcodeproj`
 3. Update: `Example/Core/Models/Constants.swift`
 4. Once you run the app, add your POS details: `Settings -> Environment -> Create -> (Enter POS details) -> Save`

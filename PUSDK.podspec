@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 
   s.author    = { 'PayU' => 'itsupport@payu.pl' }
   s.license   = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
-  s.source    = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0-alpha' }
+  s.source    = { :git => 'https://github.com/PayU-EMEA/PayU-iOS.git', :branch => 'release/2.0.0' }
 
   s.platform              = :ios
   s.swift_version         = '5.3'

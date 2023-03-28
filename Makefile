@@ -5,15 +5,12 @@ help: Makefile
 
 ## ➡️  generate_documentation: Generate `docs` folder with generated `PUSDK.doccarchive`
 generate_documentation:
-	./docc-generate-documentation.sh
-	sleep 5
-	./docc-update-documentation.sh
+	./dev/generate_documentation.sh
 
 ## ➡️  generate_mocks: Generate *.mocks
 generate_mocks:
-	./generate-mocks.sh
+	./dev/generate_mocks.sh
 
 ## ➡️  xcodebuild_test: Run all tests
 xcodebuild_test:
-	make generate_mocks
-	./xcodebuild-test.sh
+	./dev/xcodebuild_test.sh
