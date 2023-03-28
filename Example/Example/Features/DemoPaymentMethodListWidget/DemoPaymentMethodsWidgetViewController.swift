@@ -6,8 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
-import PUPaymentMethods
+import PUSDK
 import UIKit
 
 final class DemoPaymentMethodsWidgetViewController: ViewController {
@@ -74,7 +73,7 @@ final class DemoPaymentMethodsWidgetViewController: ViewController {
   // MARK: - Actions
   @objc private func actionAdd(_ sender: Any) {
     if let paymentMethod = widget.paymentMethod {
-      Console.console.log(value: paymentMethod, level: .verbose)
+      Console.console.log(paymentMethod)
       viewModel.didSelect(paymentMethod)
     }
   }
@@ -83,13 +82,13 @@ final class DemoPaymentMethodsWidgetViewController: ViewController {
 // MARK: - PaymentMethodsWidgetDelegate
 extension DemoPaymentMethodsWidgetViewController: PaymentMethodsWidgetDelegate {
   func paymentMethodsWidget(_ widget: PaymentMethodsWidget, didSelect paymentMethod: PaymentMethod) {
-    Console.console.log(value: paymentMethod, level: .verbose)
     payBarButtonItem.isEnabled = true
+    Console.console.log(paymentMethod)
   }
 
   func paymentMethodsWidget(_ widget: PaymentMethodsWidget, didDelete paymentMethod: PaymentMethod) {
-    Console.console.log(value: paymentMethod, level: .verbose)
     viewModel.didDelete(paymentMethod)
+    Console.console.log(paymentMethod)
   }
 }
 

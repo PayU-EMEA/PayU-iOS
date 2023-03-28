@@ -6,9 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //  
 
-import PUApplePay
-import PUCore
-import PUPaymentMethods
+import PUSDK
 import UIKit
 
 protocol DemoPaymentMethodsWidgetViewModelPresenter: AnyObject {
@@ -33,6 +31,7 @@ final class DemoPaymentMethodsWidgetViewModel {
 
   // MARK: - Public Methods
   func didSelect(_ paymentMethod: PaymentMethod) {
+    Console.console.log(paymentMethod)
     processor.process(
       paymentMethod: paymentMethod,
       onDidProcess: onDidProcess,
@@ -40,20 +39,21 @@ final class DemoPaymentMethodsWidgetViewModel {
   }
 
   func didDelete(_ paymentMethod: PaymentMethod) {
+    Console.console.log(paymentMethod)
     dataRepository.deletePaymentMethod(token: paymentMethod.value) { result in
-      Console.console.log(value: paymentMethod, level: .verbose)
+      Console.console.log(paymentMethod)
     }
   }
 
   // MARK: - Private Methods
   private func onDidProcess(_ payMethod: PayMethod) {
     presenter?.presenterViewController?.dialog(title: "PayMethod", message: payMethod.formattedDescription)
-    Console.console.log(value: payMethod, level: .verbose)
+    Console.console.log(payMethod)
   }
 
   private func onDidFail(_ error: Error) {
     presenter?.presenterViewController?.dialog(title: "PayMethod", message: error.localizedDescription)
-    Console.console.log(value: error, level: .verbose)
+    Console.console.log(error)
   }
 }
 

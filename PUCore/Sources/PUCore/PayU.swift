@@ -8,7 +8,7 @@ public struct PayU {
   /// Examples of country or region codes include "GB", "FR", and "HK".
   public static var currencyCode: String! {
     didSet {
-      Console.console.log(value: currencyCode, level: .verbose)
+      Console.console.log(currencyCode)
     }
   }
 
@@ -30,14 +30,14 @@ public struct PayU {
   /// If provided languageCode is not available - default system Locale should be used.
   public static var languageCode: String! {
     didSet {
-      Console.console.log(value: languageCode, level: .verbose)
+      Console.console.log(languageCode)
     }
   }
 
   /// Merchant's Point of Sale
   public static var pos: POS! {
     didSet {
-      Console.console.log(value: pos, level: .verbose)
+      Console.console.log(pos)
     }
   }
 }

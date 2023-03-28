@@ -52,7 +52,7 @@ public final class Console {
   ///   - function: Source function where this function was called
   ///   - value: message you want to display, for ex: server response, etc.
   ///   - level: ``Console/Level`` value. Default is ``Console/Level/verbose``
-  public func log(file: String = #file, line: Int = #line, function: String = #function, value: Any? = nil, level: Console.Level) {
+  public func log(_ value: Any? = nil, file: String = #file, line: Int = #line, function: String = #function, level: Console.Level = .verbose) {
     guard let variable = ProcessInfo.processInfo.environment["PU_CONSOLE_ENABLED"], variable == "enable" else { return }
     guard let url = URL(string: file) else { return }
     guard debug else { return }

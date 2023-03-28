@@ -7,8 +7,7 @@
 //  
 
 import UIKit
-import PUTheme
-import PUPaymentCardScanner
+import PUSDK
 
 final class ShowDemoPaymentCardScannerUseCase {
   private weak var presenter: UIViewController?
@@ -34,6 +33,7 @@ final class ShowDemoPaymentCardScannerUseCase {
 @available(iOS 13.0, *)
 extension ShowDemoPaymentCardScannerUseCase: PaymentCardScannerViewControllerDelegate {
   func paymentCardScannerViewController(_ viewController: PaymentCardScannerViewController, didProcess result: PaymentCardScannerResult) {
+    Console.console.log(result)
     viewController.navigationController?.dismiss(animated: true) { [weak self] in
       self?.presenter?.dialog(
         title: "ShowDemoPaymentCardScannerUseCase",
@@ -44,6 +44,7 @@ extension ShowDemoPaymentCardScannerUseCase: PaymentCardScannerViewControllerDel
   }
 
   func paymentCardScannerViewController(_ viewController: PaymentCardScannerViewController, didFail error: Error) {
+    Console.console.log(error)
     viewController.navigationController?.dismiss(animated: true) { [weak self] in
       self?.presenter?.dialog(
         title: "ShowDemoPaymentCardScannerUseCase",
@@ -52,6 +53,7 @@ extension ShowDemoPaymentCardScannerUseCase: PaymentCardScannerViewControllerDel
   }
 
   func paymentCardScannerViewControllerDidCancel(_ viewController: PaymentCardScannerViewController) {
+    Console.console.log()
     viewController.navigationController?.dismiss(animated: true) { [weak self] in
       self?.presenter?.dialog(
         title: "ShowDemoPaymentCardScannerUseCase",

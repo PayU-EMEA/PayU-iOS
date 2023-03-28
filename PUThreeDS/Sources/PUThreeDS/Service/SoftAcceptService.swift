@@ -114,7 +114,6 @@ public final class SoftAcceptService: NSObject, WKScriptMessageHandler {
 
   // MARK: - WKScriptMessageHandler
   public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-    Console.console.log(value: message.body, level: .verbose)
     guard let request = request else { return }
     guard let result = SoftAcceptResult.from(message: message.body) else { return }
     guard let id = extractor.extractAuthenticationId(request.redirectUrl) else { return }

@@ -90,10 +90,6 @@ public final class PaymentCardViewController: UIViewController {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
-
-  deinit {
-    Console.console.log(value: nil, level: .verbose)
-  }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -230,15 +226,13 @@ private extension PaymentCardViewController {
   }
 }
 
-// MARK: - AddCardViewModelDelegate
+// MARK: - PaymentCardViewModelDelegate
 extension PaymentCardViewController: PaymentCardViewModelDelegate {
   func paymentCardViewModel(_ viewModel: PaymentCardViewModel, didComplete cardToken: CardToken) {
-    Console.console.log(value: cardToken, level: .verbose)
     delegate?.paymentCardViewController(self, didComplete: cardToken)
   }
   
   func paymentCardViewModel(_ viewModel: PaymentCardViewModel, didFail error: Error) {
-    Console.console.log(value: error, level: .verbose)
     let alertController = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
     alertController.addAction(UIAlertAction(title: "cancel".localized(), style: .cancel))
     present(alertController, animated: true)

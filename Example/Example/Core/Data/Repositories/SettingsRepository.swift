@@ -7,8 +7,7 @@
 //  
 
 import Foundation
-import PUCore
-import PUTheme
+import PUSDK
 
 final class SettingsRepository {
 

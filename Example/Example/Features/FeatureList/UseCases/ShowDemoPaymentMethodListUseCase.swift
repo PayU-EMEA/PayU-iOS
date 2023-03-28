@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import PUCore
-import PUPaymentMethods
+import PUSDK
 
 final class ShowDemoPaymentMethodsUseCase {
   private let repository = DataRepository()
@@ -48,12 +47,11 @@ final class ShowDemoPaymentMethodsUseCase {
 extension ShowDemoPaymentMethodsUseCase: PaymentMethodsViewControllerDelegate {
   func viewController(_ viewController: PaymentMethodsViewController, didSelect paymentMethod: PaymentMethod) {
     viewController.navigationController?.popViewController(animated: true)
-    Console.console.log(value: paymentMethod, level: .verbose)
+    presenter?.dialog(title: "ShowDemoPaymentMethodsUseCase", message: paymentMethod.formattedDescription)
+    Console.console.log(paymentMethod)
   }
 
   func viewController(_ viewController: PaymentMethodsViewController, didDelete paymentMethod: PaymentMethod) {
-    repository.deletePaymentMethod(token: paymentMethod.value) { result in
-      Console.console.log(level: .verbose)
-    }
+    repository.deletePaymentMethod(token: paymentMethod.value) { Console.console.log($0) }
   }
 }

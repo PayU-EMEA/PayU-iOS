@@ -7,7 +7,7 @@
 //  
 
 import Foundation
-import PUCore
+import PUSDK
 
 final class OrderRepository {
 

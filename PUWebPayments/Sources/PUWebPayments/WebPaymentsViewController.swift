@@ -212,30 +212,25 @@ extension WebPaymentsViewController: WebPaymentsViewModelDelegate {
 extension WebPaymentsViewController: WKNavigationDelegate {
   public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
     guard let url = navigationAction.request.url else { return }
-    Console.console.log(value: url.absoluteString, level: .verbose)
     let navigationPolicy = viewModel.navigationPolicy(url)
-    Console.console.log(value: navigationPolicy.rawValue, level: .verbose)
     decisionHandler(navigationPolicy)
   }
 
   public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-    Console.console.log(level: .verbose)
     activityIndicatorView.startAnimating()
   }
 
   public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-    Console.console.log(level: .verbose)
     activityIndicatorView.stopAnimating()
     viewModel.didFailNavigation(with: error)
   }
 
   public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-    Console.console.log(level: .verbose)
     activityIndicatorView.stopAnimating()
+    viewModel.didFailNavigation(with: error)
   }
 
   public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    Console.console.log(level: .verbose)
     activityIndicatorView.stopAnimating()
   }
 }

@@ -7,8 +7,7 @@
 //  
 
 import UIKit
-import PUPaymentCard
-import PUCore
+import PUSDK
 
 final class ShowDemoPaymentCardWidgetUseCase {
   private weak var presenter: UIViewController?
@@ -28,6 +27,7 @@ final class ShowDemoPaymentCardWidgetUseCase {
 extension ShowDemoPaymentCardWidgetUseCase: DemoPaymentCardWidgetViewControllerDelegate {
   func demoPaymentCardWidgetViewController(_ viewController: DemoPaymentCardWidgetViewController, didComplete cardToken: CardToken) {
     viewController.navigationController?.popViewController(animated: true)
-    presenter?.dialog(title: "CardToken", message: cardToken.value)
+    presenter?.dialog(title: "ShowDemoPaymentCardWidgetUseCase", message: cardToken.value)
+    Console.console.log(cardToken)
   }
 }

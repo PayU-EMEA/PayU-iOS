@@ -6,9 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //  
 
-import PUApplePay
-import PUCore
-import PUPaymentMethods
+import PUSDK
 import UIKit
 
 protocol OrderPaymentMethodViewModelDelegate: AnyObject {
@@ -126,12 +124,12 @@ final class OrderPaymentMethodViewModel {
 
   // MARK: - Handlers
   private func onDidProcess(_ payMethod: PayMethod) {
-    Console.console.log(value: payMethod, level: .verbose)
+    Console.console.log(payMethod)
     createOrder(payMethod: payMethod)
   }
 
   private func onDidFail(_ error: Error) {
-    Console.console.log(value: error, level: .verbose)
+    Console.console.log(error)
   }
 }
 

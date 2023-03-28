@@ -74,10 +74,6 @@ public final class OfferViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
-  deinit {
-    Console.console.log(value: nil, level: .verbose)
-  }
-
   // MARK: - View Lifecycle
   public override func viewDidLoad() {
     super.viewDidLoad()

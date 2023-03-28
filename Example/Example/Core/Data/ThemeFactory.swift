@@ -6,7 +6,7 @@
 //  Copyright © 2023 PayU S.A. All rights reserved.
 //  
 
-import PUTheme
+import PUSDK
 import UIKit
 
 struct ThemeFactory {

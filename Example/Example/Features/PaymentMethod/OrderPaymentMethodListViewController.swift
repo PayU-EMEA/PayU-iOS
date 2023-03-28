@@ -7,8 +7,7 @@
 //  
 
 import UIKit
-import PUCore
-import PUPaymentMethods
+import PUSDK
 
 final class OrderPaymentMethodListViewController: ListViewController<ListViewCell>, OrderPaymentMethodViewModelDelegate, OrderPaymentMethodViewModelPresenter, PaymentMethodsViewControllerDelegate {
 
@@ -107,6 +106,6 @@ final class OrderPaymentMethodListViewController: ListViewController<ListViewCel
   }
 
   func viewController(_ viewController: PaymentMethodsViewController, didDelete paymentMethod: PaymentMethod) {
-    Console.console.log(level: .verbose)
+    Console.console.log()
   }
 }

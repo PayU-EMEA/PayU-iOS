@@ -216,10 +216,6 @@ public final class PaymentCardWidget: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  deinit {
-    Console.console.log(value: nil, level: .verbose)
-  }
-
   // MARK: - Actions
   @objc private func actionTap(_ sender: Any) {
     endEditing(true)

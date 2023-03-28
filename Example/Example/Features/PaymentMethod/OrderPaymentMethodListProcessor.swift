@@ -7,9 +7,7 @@
 //  
 
 import Foundation
-import PUCore
-import PUThreeDS
-import PUWebPayments
+import PUSDK
 import UIKit
 
 final class OrderPaymentMethodListProcessor {
@@ -31,7 +29,7 @@ final class OrderPaymentMethodListProcessor {
 
   // MARK: - Public Methods
   func process(_ orderCreateResponse: OrderCreateResponse) {
-    Console.console.log(value: orderCreateResponse, level: .verbose)
+    Console.console.log(orderCreateResponse)
     orderCreateResponse.redirectUri == nil
     ? processWithoutRedirectUrl(orderCreateResponse)
     : processWithRedirectUrl(orderCreateResponse)
@@ -39,12 +37,12 @@ final class OrderPaymentMethodListProcessor {
 
   // MARK: - Private Methods
   private func processWithoutRedirectUrl(_ orderCreateResponse: OrderCreateResponse) {
-    Console.console.log(value: orderCreateResponse, level: .verbose)
+    Console.console.log(orderCreateResponse)
     presentingViewController?.dialog(title: "WebPaymentsResult", message: "status: \(orderCreateResponse.status.statusCode)")
   }
 
   private func processWithRedirectUrl(_ orderCreateResponse: OrderCreateResponse) {
-    Console.console.log(value: orderCreateResponse, level: .verbose)
+    Console.console.log(orderCreateResponse)
 
     switch orderCreateResponse.status.statusCode {
       case .success:
@@ -64,17 +62,21 @@ final class OrderPaymentMethodListProcessor {
   }
 
   private func process3DS2Payment(_ redirectUrl: URL) {
+    Console.console.log(redirectUrl)
     let request = SoftAcceptRequest(redirectUrl: redirectUrl)
     softAcceptService.authenticate(request: request)
   }
 
   private func processCVVPayment(_ redirectUrl: URL) {
+    Console.console.log(redirectUrl)
     let extractor = CVVAuthorizationExtractor()
     let refReqId = extractor.extractRefReqId(redirectUrl)!
     cvvAuthorizationService.authorize(refReqId: refReqId)
   }
 
   private func processWebPayment(_ requestType: WebPaymentsRequest.RequestType, _ orderCreateResponse: OrderCreateResponse) {
+    Console.console.log(requestType)
+    Console.console.log(orderCreateResponse)
     let redirectUrl = URL(string: orderCreateResponse.redirectUri!)!
     let continueUrl = URL(string: Constants.Order.continueUrl)!
     let request = WebPaymentsRequest(requestType: requestType, redirectUrl: redirectUrl, continueUrl: continueUrl)
@@ -95,24 +97,24 @@ extension OrderPaymentMethodListProcessor: WebPaymentsViewControllerDelegate {
       self.presentingViewController?.dialog(title: "WebPaymentsResult", message: "status: \(result.status)")
       switch result.status {
         case .success:
-          Console.console.log(value: result, level: .verbose)
+          Console.console.log(result)
 
         case .failure:
-          Console.console.log(value: result, level: .verbose)
+          Console.console.log(result)
 
         case .cancelled:
-          Console.console.log(value: result, level: .verbose)
+          Console.console.log(result)
 
         case .continue3DS:
-          Console.console.log(value: result, level: .verbose)
+          Console.console.log(result)
           self.process3DS2Payment(result.url)
 
         case .continueCvv:
-          Console.console.log(value: result, level: .verbose)
+          Console.console.log(result)
           self.processCVVPayment(result.url)
 
         case .externalApplication:
-          Console.console.log(value: result, level: .verbose)
+          Console.console.log(result)
       }
     }
   }
@@ -121,25 +123,25 @@ extension OrderPaymentMethodListProcessor: WebPaymentsViewControllerDelegate {
 // MARK: - CVVAuthorizationServiceDelegate
 extension OrderPaymentMethodListProcessor: CVVAuthorizationServiceDelegate {
   func cvvAuthorizationService(_ service: CVVAuthorizationService, didComplete status: CVVAuthorizationResult) {
-    Console.console.log(value: status, level: .verbose)
+    Console.console.log(status)
   }
 
   func cvvAuthorizationService(_ service: CVVAuthorizationService, didFail error: Error) {
-    Console.console.log(value: error, level: .verbose)
+    Console.console.log(error)
   }
 }
 
 // MARK: - SoftAcceptServiceDelegate
 extension OrderPaymentMethodListProcessor: SoftAcceptServiceDelegate {
   func softAcceptService(_ service: SoftAcceptService, didStartAuthentication request: SoftAcceptRequest) {
-    Console.console.log(value: request, level: .verbose)
+    Console.console.log(request)
     alertViewController = UIAlertController(title: "SoftAccept", message: "Authenticating ...", preferredStyle: .alert)
     alertViewController?.addAction(.init(title: "Cancel", style: .cancel))
     presentingViewController?.present(alertViewController!, animated: true)
   }
 
   func softAcceptService(_ service: SoftAcceptService, didCompleteAuthentication status: SoftAcceptStatus) {
-    Console.console.log(value: status, level: .verbose)
+    Console.console.log(status)
     alertViewController?.dismiss(animated: true)
     presentingViewController?.dialog(title: "didCompleteAuthentication", message: "\(status)")
   }

@@ -55,7 +55,6 @@ final class PaymentCardScannerService {
       try paymentCardNumberValidator.validate(recognizedText)
       let cardNumber = paymentCardNumberFormatter.formatted(recognizedText)
       result = result.copyWith(cardNumber: cardNumber)
-      Console.console.log(value: cardNumber, level: .verbose)
     } catch {  }
   }
 
@@ -66,7 +65,6 @@ final class PaymentCardScannerService {
       try paymentCardDateValidator.validate(recognizedText)
       let cardExpirationDate = paymentCardDateFormatter.formatted(recognizedText)
       result = result.copyWith(cardExpirationDate: cardExpirationDate)
-      Console.console.log(value: cardExpirationDate, level: .verbose)
     } catch {  }
   }
 

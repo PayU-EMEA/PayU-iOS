@@ -6,11 +6,8 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-// TODO: - ADD APPLE PAY MERCHANT TO EXAMPLE APP
-
 import UIKit
-import PUCore
-import PUApplePay
+import PUSDK
 
 final class ShowDemoApplePayUseCase {
   private weak var presenter: UIViewController?
@@ -45,17 +42,17 @@ final class ShowDemoApplePayUseCase {
 
   // MARK: - Handlers
   private func onDidAuthorizeApplePay(_ paymentDataToken: String) {
-    Console.console.log(value: paymentDataToken, level: .verbose)
+    Console.console.log(paymentDataToken)
     presenter?.dialog(title: "ShowDemoApplePayUseCase", message: paymentDataToken)
   }
 
   private func onDidCancelApplePay() {
-    Console.console.log(value: nil, level: .verbose)
+    Console.console.log(nil)
     presenter?.dialog(title: "ShowDemoApplePayUseCase", message: "applePayServiceDidCancel")
   }
 
   private func onDidFailApplePay(_ error: Error) {
-    Console.console.log(value: error, level: .verbose)
+    Console.console.log(error)
     presenter?.dialog(title: "ShowDemoApplePayUseCase", message: error.localizedDescription)
   }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2023 PayU S.A. All rights reserved.
 //  
 
-import PUPaymentMethods
+import PUSDK
 
 class PaymentMethodsDatabase {
 

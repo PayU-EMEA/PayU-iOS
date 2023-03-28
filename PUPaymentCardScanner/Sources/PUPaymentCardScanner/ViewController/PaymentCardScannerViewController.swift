@@ -107,7 +107,6 @@ public final class PaymentCardScannerViewController: UIViewController {
   }
 
   deinit {
-    Console.console.log(level: .verbose)
     stopCaptureSession()
   }
 
@@ -302,9 +301,7 @@ public final class PaymentCardScannerViewController: UIViewController {
           }
         }
       }
-    } catch {
-      Console.console.log(value: error, level: .verbose)
-    }
+    } catch {  }
   }
 
   private func completeImageProcessing() {

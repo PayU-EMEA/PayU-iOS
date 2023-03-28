@@ -48,7 +48,6 @@ final class PaymentMethodsWidgetViewModel {
   }
 
   func didTapEnterNewBlikCode() {
-    Console.console.log(value: nil, level: .verbose)
     guard let paymentMethod = selectedPaymentMethod else { return }
     updateWidgetState(.blikToken(paymentMethod))
     delegate?.viewModel(self, didUpdateState: state)
@@ -57,7 +56,6 @@ final class PaymentMethodsWidgetViewModel {
   func didEnterNewBlikCode(_ text: String) {
     let blikCode = formattedBlikAuthorizationCode(text)
     blikAuthorizationCode = blikCode.isBlikCode ? blikCode : nil
-    Console.console.log(value: blikAuthorizationCode, level: .verbose)
   }
 
   func didSelect(_ paymentMethod: PaymentMethod?) {

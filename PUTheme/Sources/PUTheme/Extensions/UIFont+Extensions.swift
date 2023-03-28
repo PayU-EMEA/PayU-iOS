@@ -7,10 +7,6 @@
 
 import UIKit
 
-#if canImport(PUCore)
-import PUCore
-#endif
-
 extension UIFont {
 
   // MARK: - FamilyName
@@ -22,11 +18,6 @@ extension UIFont {
 
       // MARK: - Public Methods
       static func fontName(weight: UIFont.Weight) -> Self {
-        if (weight != .regular) {
-          Console.console.log(
-            value: "Could not create font for `\(weight)`",
-            level: .verbose)
-        }
         return .regular
       }
     }
@@ -38,16 +29,9 @@ extension UIFont {
   }
 
   private static func registerFont(fontName: String, withExtension fontExtension: String) {
-    guard
-      let url = Bundle.current(.PUTheme).url(forResource: fontName, withExtension: fontExtension),
-      let dataProvider = CGDataProvider(url: url as CFURL),
-      let font = CGFont(dataProvider) else {
-
-      Console.console.log(
-        value: "Could not create font from filename: \(fontName) with extension \(fontExtension)",
-        level: .verbose)
-      return
-    }
+    guard let url = Bundle.current(.PUTheme).url(forResource: fontName, withExtension: fontExtension),
+          let dataProvider = CGDataProvider(url: url as CFURL),
+          let font = CGFont(dataProvider) else { return }
 
     var error: Unmanaged<CFError>?
     CTFontManagerRegisterGraphicsFont(font, &error)

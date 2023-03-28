@@ -7,8 +7,7 @@
 //  
 
 import UIKit
-import PUCore
-import PUThreeDS
+import PUSDK
 
 final class ShowDemoSoftAcceptUserCase {
   private weak var presenter: UIViewController?
@@ -30,14 +29,18 @@ final class ShowDemoSoftAcceptUserCase {
 // MARK: - SoftAcceptServiceDelegate
 extension ShowDemoSoftAcceptUserCase: SoftAcceptServiceDelegate {
   func softAcceptService(_ service: SoftAcceptService, didStartAuthentication request: SoftAcceptRequest) {
-    Console.console.log(value: request, level: .verbose)
+    Console.console.log(request)
     alertViewController = UIAlertController(title: "SoftAccept", message: "Authenticating ...", preferredStyle: .alert)
     alertViewController?.addAction(.init(title: "Cancel", style: .cancel))
     presenter?.present(alertViewController!, animated: true)
   }
 
   func softAcceptService(_ service: SoftAcceptService, didCompleteAuthentication status: SoftAcceptStatus) {
-    Console.console.log(value: status, level: .verbose)
-    alertViewController?.dismiss(animated: true)
+    Console.console.log(status)
+    alertViewController?.dismiss(animated: true) { [weak self] in
+      self?.presenter?.dialog(
+        title: "ShowDemoSoftAcceptUserCase",
+        message: status.rawValue)
+    }
   }
 }

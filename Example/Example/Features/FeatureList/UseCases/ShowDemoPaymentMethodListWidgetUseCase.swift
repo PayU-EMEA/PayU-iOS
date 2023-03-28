@@ -7,8 +7,7 @@
 //  
 
 import UIKit
-import PUCore
-import PUPaymentMethods
+import PUSDK
 
 final class ShowDemoPaymentMethodsWidgetUseCase {
   private let repository = DataRepository()

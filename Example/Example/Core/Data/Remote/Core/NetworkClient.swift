@@ -7,7 +7,7 @@
 //  
 
 import Foundation
-import PUCore
+import PUSDK
 
 class NetworkClient<E: HTTPEndpoint>: NSObject, URLSessionTaskDelegate {
   private let encoder = JSONEncoder()
@@ -33,7 +33,7 @@ class NetworkClient<E: HTTPEndpoint>: NSObject, URLSessionTaskDelegate {
       completionHandler: { data, response, error in
 
         if let error = error {
-          Console.console.log(value: error, level: .verbose)
+          Console.console.log(error)
           DispatchQueue.main.async {
             completionHandler(.failure(NetworkClientError.didReceiveRequestError))
           }
@@ -47,16 +47,16 @@ class NetworkClient<E: HTTPEndpoint>: NSObject, URLSessionTaskDelegate {
         if let data = data {
           do {
             let json = try JSONSerialization.jsonObject(with: data, options: [])
-            Console.console.log(value: json, level: .verbose)
+            Console.console.log(json)
 
             let model = try self.decoder.decode(T.self, from: data)
-            Console.console.log(value: model, level: .verbose)
+            Console.console.log(model)
 
             DispatchQueue.main.async {
               completionHandler(.success(model))
             }
           } catch {
-            Console.console.log(value: error, level: .verbose)
+            Console.console.log(error)
             DispatchQueue.main.async {
               completionHandler(.failure(error))
             }

@@ -54,9 +54,9 @@ public struct NetworkClient: NetworkClientProtocol {
     target.httpHeaders.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
 
     session.dataTask(with: request, completionHandler: { (responseData, response, error) in
-      if responseData != nil { Console.console.log(value: responseData, level: .verbose) }
-      if response != nil { Console.console.log(value: response, level: .verbose) }
-      if error != nil { Console.console.log(value: error, level: .verbose) }
+      if responseData != nil { Console.console.log(responseData) }
+      if response != nil { Console.console.log(response) }
+      if error != nil { Console.console.log(error) }
 
       guard let responseData = responseData else { return }
 
@@ -64,10 +64,10 @@ public struct NetworkClient: NetworkClientProtocol {
         let decoder = JSONDecoder()
         let data = responseData.isEmpty ? "{}".data(using: .utf8)! : responseData
         let decoded = try decoder.decode(T.self, from: data)
-        Console.console.log(value: decoded, level: .verbose)
+        Console.console.log(decoded)
         DispatchQueue.main.async { completionHandler(.success(decoded)) }
       } catch {
-        Console.console.log(value: error, level: .verbose)
+        Console.console.log(error)
         DispatchQueue.main.async { completionHandler(.failure(error)) }
       }
     }).resume()

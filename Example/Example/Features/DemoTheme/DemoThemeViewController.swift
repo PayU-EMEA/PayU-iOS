@@ -6,8 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //  
 
-import PUCore
-import PUTheme
+import PUSDK
 import UIKit
 
 final class DemoThemeViewController: ViewController {

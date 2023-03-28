@@ -6,7 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //
 
-import PUCore
+import PUSDK
 
 public struct PaymentMethodsResponse: Codable {
   public let blikTokens: [BlikToken]?

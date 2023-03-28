@@ -7,7 +7,7 @@
 //  
 
 import UIKit
-import PUWebPayments
+import PUSDK
 
 final class ShowDemoCVVAuthorizationUseCase {
 
@@ -34,9 +34,11 @@ final class ShowDemoCVVAuthorizationUseCase {
 extension ShowDemoCVVAuthorizationUseCase: CVVAuthorizationServiceDelegate {
   func cvvAuthorizationService(_ service: CVVAuthorizationService, didComplete status: CVVAuthorizationResult) {
     presenter?.dialog(title: "ShowDemoCVVAuthorizationUseCase", message: status.rawValue)
+    Console.console.log(status)
   }
 
   func cvvAuthorizationService(_ service: CVVAuthorizationService, didFail error: Error) {
     presenter?.dialog(title: "ShowDemoCVVAuthorizationUseCase", message: error.localizedDescription)
+    Console.console.log(error)
   }
 }

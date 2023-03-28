@@ -91,10 +91,6 @@ public final class PaymentMethodsWidget: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  deinit {
-    Console.console.log(value: nil, level: .verbose)
-  }
-
   // MARK: - Private Methods
   private func setupAppearance() {
     backgroundColor = PUTheme.theme.colorTheme.secondaryGray4

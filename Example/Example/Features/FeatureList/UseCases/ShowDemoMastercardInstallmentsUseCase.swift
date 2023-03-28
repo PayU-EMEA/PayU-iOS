@@ -7,8 +7,7 @@
 //  
 
 import UIKit
-import PUCore
-import PUMastercardInstallments
+import PUSDK
 
 final class ShowDemoMastercardInstallmentsUseCase {
 
@@ -40,8 +39,8 @@ final class ShowDemoMastercardInstallmentsUseCase {
 // MARK: - OfferViewControllerDelegate
 extension ShowDemoMastercardInstallmentsUseCase: OfferViewControllerDelegate {
   func offerViewController(_ viewController: OfferViewController, didComplete result: InstallmentResult) {
+    Console.console.log(result)
     viewController.navigationController?.dismiss(animated: true) { [weak self] in
-      Console.console.log(value: result, level: .verbose)
       self?.presenter?.dialog(
         title: "ShowDemoMastercardInstallmentsUseCase",
         message: "numberOfInstallments: \(String(describing: result.numberOfInstallments))\noptionId:\(String(describing: result.optionId))")
@@ -49,9 +48,11 @@ extension ShowDemoMastercardInstallmentsUseCase: OfferViewControllerDelegate {
   }
 
   func offerViewModelDidCancel(_ viewController: OfferViewController) {
+    Console.console.log()
     viewController.navigationController?.dismiss(animated: true) { [weak self] in
-      Console.console.log(value: nil, level: .verbose)
-      self?.presenter?.dialog(title: "ShowDemoMastercardInstallmentsUseCase", message: "offerViewModelDidCancel")
+      self?.presenter?.dialog(
+        title: "ShowDemoMastercardInstallmentsUseCase",
+        message: "offerViewModelDidCancel")
     }
   }
 }

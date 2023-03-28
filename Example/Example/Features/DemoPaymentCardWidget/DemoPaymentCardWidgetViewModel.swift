@@ -7,8 +7,7 @@
 //  
 
 import Foundation
-import PUPaymentCard
-import PUCore
+import PUSDK
 
 protocol DemoPaymentCardWidgetViewModelDelegate: AnyObject {
   func demoPaymentCardWidgetViewModel(_ viewModel: DemoPaymentCardWidgetViewModel, didComplete cardToken: CardToken)
@@ -39,6 +38,7 @@ final class DemoPaymentCardWidgetViewModel {
 
   // MARK: - Public Methods
   func tokenize(agreement: Bool) {
+    Console.console.log(agreement)
     service.tokenize(agreement: agreement) { [weak self] result in
       guard let self = self else { return }
 

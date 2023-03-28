@@ -6,8 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //  
 
-import PUPaymentCard
-import PUCore
+import PUSDK
 import UIKit
 
 protocol DemoPaymentCardWidgetViewControllerDelegate: AnyObject {
@@ -35,7 +34,7 @@ final class DemoPaymentCardWidgetViewController: ViewController {
 
   deinit {
     NotificationCenter.default.removeObserver(self)
-    Console.console.log(value: nil, level: .verbose)
+    Console.console.log()
   }
 
   // MARK: - View Lifecycle
@@ -68,10 +67,12 @@ final class DemoPaymentCardWidgetViewController: ViewController {
   // MARK: - Actions
   @objc private func actionSaveAndUse(_ sender: Any) {
     viewModel.tokenize(agreement: true)
+    Console.console.log()
   }
 
   @objc private func actionUse(_ sender: Any) {
     viewModel.tokenize(agreement: false)
+    Console.console.log()
   }
 
   @objc private func actionDidTapHintAccessoryViewInCVVField(_ sender: Any) {
@@ -83,10 +84,12 @@ final class DemoPaymentCardWidgetViewController: ViewController {
 extension DemoPaymentCardWidgetViewController: DemoPaymentCardWidgetViewModelDelegate {
   func demoPaymentCardWidgetViewModel(_ viewModel: DemoPaymentCardWidgetViewModel, didComplete cardToken: CardToken) {
     delegate?.demoPaymentCardWidgetViewController(self, didComplete: cardToken)
+    Console.console.log()
   }
 
   func demoPaymentCardWidgetViewModel(_ viewModel: DemoPaymentCardWidgetViewModel, didFail error: Error) {
     dialog(message: error.localizedDescription)
+    Console.console.log()
   }
 }
 

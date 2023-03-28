@@ -7,7 +7,7 @@
 //  
 
 import Foundation
-import PUCore
+import PUSDK
 
 enum EnvironmentType: String, Codable, CaseIterable {
   case production = "Production"

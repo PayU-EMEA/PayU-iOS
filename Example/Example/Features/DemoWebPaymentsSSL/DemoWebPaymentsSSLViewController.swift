@@ -6,7 +6,7 @@
 //  Copyright © 2022 PayU S.A. All rights reserved.
 //  
 
-import PUWebPayments
+import PUSDK
 import UIKit
 
 final class DemoWebPaymentsSSLViewController: ListViewController<ListViewCell>, DemoWebPaymentsSSLViewModelDelegate, WebPaymentsViewControllerDelegate {

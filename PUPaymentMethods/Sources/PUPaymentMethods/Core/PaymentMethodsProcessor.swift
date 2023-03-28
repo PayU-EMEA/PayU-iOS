@@ -173,9 +173,7 @@ public final class PaymentMethodsProcessor: PaymentMethodsProcessorProtocol {
         authorizationCode: paymentDataToken))
   }
 
-  private func onDidCancelApplePay() {
-    Console.console.log(level: .verbose)
-  }
+  private func onDidCancelApplePay() {  }
 
   private func onDidFailApplePay(_ error: Error) {
     onDidFail?(error)
@@ -189,7 +187,5 @@ public final class PaymentMethodsProcessor: PaymentMethodsProcessorProtocol {
 
   }
 
-  private func onDidCancelBlik() {
-    Console.console.log(level: .verbose)
-  }
+  private func onDidCancelBlik() {  }
 }

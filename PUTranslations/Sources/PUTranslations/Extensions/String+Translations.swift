@@ -40,9 +40,7 @@ public extension String {
       .localizedString(forKey: self, value: nil, table: tableName)
 
     if self == localizedString {
-      Console.console.log(
-        value: "A user-visible string for `\(self)` for `\(languageCode)` not found.",
-        level: .verbose)
+      Console.console.log("A user-visible string for `\(self)` for `\(languageCode)` not found.")
     }
 
     return localizedString

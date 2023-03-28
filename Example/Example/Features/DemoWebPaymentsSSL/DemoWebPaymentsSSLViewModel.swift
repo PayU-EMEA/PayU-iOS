@@ -7,7 +7,7 @@
 //  
 
 import Foundation
-import PUWebPayments
+import PUSDK
 
 protocol DemoWebPaymentsSSLViewModelDelegate: AnyObject {
   func demoWebPaymentsSSLViewModel(_ viewModel: DemoWebPaymentsSSLViewModel, shouldPresentWebPayments request: WebPaymentsRequest)

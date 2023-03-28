@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import WebKit
 
 protocol WebPaymentsViewModelDelegate: AnyObject {
