@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 effective-4.1.50 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.8.1 effective-4.1.50 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name PayU_SDK_Lite
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -8,12 +8,13 @@ import SafariServices
 import Swift
 import WebKit
 import _Concurrency
+import _StringProcessing
 @objc public protocol PU3DSSoftAcceptRequestPerformerDelegate : ObjectiveC.NSObjectProtocol {
   @objc func performerDidStart(_ performer: PayU_SDK_Lite.PU3DSSoftAcceptRequestPerformer)
   @objc func performer(_ performer: PayU_SDK_Lite.PU3DSSoftAcceptRequestPerformer, didCompleteWith status: PayU_SDK_Lite.PU3DSSoftAcceptRequestStatus)
 }
 @objc @objcMembers public class PU3DSSoftAcceptRequestPerformer : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
-  @objc weak public var delegate: PayU_SDK_Lite.PU3DSSoftAcceptRequestPerformerDelegate?
+  @objc weak public var delegate: (any PayU_SDK_Lite.PU3DSSoftAcceptRequestPerformerDelegate)?
   @objc public init(request: PayU_SDK_Lite.PU3DSSoftAcceptRequest)
   @objc public func perform()
   @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)

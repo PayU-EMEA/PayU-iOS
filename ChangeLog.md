@@ -1,5 +1,10 @@
 # PayU SDK Lite Change Log
 
+## Release 1.0.14
+Prepared on Wed, 07/06/2023
+### Changes:
+* Added [Pay later](https://developers.payu.com/en/overview.html#installments) PBL support (`dpt`, `dpp`, `dpcz`, `dpts`)
+
 ## Release 1.0.13
 Prepared on Wed, 26/10/2022
 ### Changes:

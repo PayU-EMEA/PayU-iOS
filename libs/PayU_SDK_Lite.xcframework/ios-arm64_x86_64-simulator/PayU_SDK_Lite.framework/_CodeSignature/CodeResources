@@ -238,7 +238,7 @@
 		</data>
 		<key>Headers/PayU_SDK_Lite-Swift.h</key>
 		<data>
-		YBvZtVUgNcy5dlWae8GBotjbqEs=
+		IQmXbTjNwvkBnZiUv3lY/pAywRA=
 		</data>
 		<key>Headers/PayU_SDK_Lite.h</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XhrwUk4ZhF0CIJCvyWeDY4bpCG8=
+		0Y59rtRHBSO5UvX9i96UVXzYOmY=
 		</data>
 		<key>LICENSE.txt</key>
 		<data>
@@ -266,19 +266,19 @@
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3c69YlBz/O2g6WOOGGpNs4GxbIc=
+		gL02VDQxcw+pIcGRenp2JKM8zac=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Dx+AoOVXaWc6PR+Jydl7BdPJYus=
+		gwV6dzFCyUdbeWjjNU9CHJ6iXLc=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3c69YlBz/O2g6WOOGGpNs4GxbIc=
+		gL02VDQxcw+pIcGRenp2JKM8zac=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		L+Fd3VyVaj9yYwcoyfPdcjJIQ/Y=
+		iCjURtXusNDpsrchV+C3CGkSL4k=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -286,19 +286,19 @@
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		H5VcLwONf+qtGONWbn9/XVP5aZY=
+		r/yK/o9Su3+eMwI3A61DpGUyCQc=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5wXuHPnshqU15z3mbSq0QicAliA=
+		SCJ+6yM9ObJ+ZPq6hpBDMJ9/FOM=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		H5VcLwONf+qtGONWbn9/XVP5aZY=
+		r/yK/o9Su3+eMwI3A61DpGUyCQc=
 		</data>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Cb4lZQIxSvotAFNex2kuEWdTcWM=
+		jNk83CLWQPn3eZN0pQ3ioIK6MWA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -458,11 +458,11 @@
 		</data>
 		<key>PUPaymentWidget.nib/objects-11.0+.nib</key>
 		<data>
-		HEBb2iG1rpFLF36oz0ShxnOUhIE=
+		e56sgGhyE9acTqEb/Ie3yid/Kas=
 		</data>
 		<key>PUPaymentWidget.nib/runtime.nib</key>
 		<data>
-		zlG09GX/DgbE/0RtMYka1mtQYh0=
+		YeYkf3/bqn2vnKN12u5OS0GBAP8=
 		</data>
 		<key>PUSecureOverlayView.nib/objects-11.0+.nib</key>
 		<data>
@@ -1485,11 +1485,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YBvZtVUgNcy5dlWae8GBotjbqEs=
+			IQmXbTjNwvkBnZiUv3lY/pAywRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			oGR5pXJR0ON2wCRHWyJanBCj8yUTDvMPoqF6b5zl7os=
+			qwO9QeqVwUJji8jOV/Qn1SWZ6QYv13CibBgXY8Y7X8A=
 			</data>
 		</dict>
 		<key>Headers/PayU_SDK_Lite.h</key>
@@ -1551,44 +1551,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3c69YlBz/O2g6WOOGGpNs4GxbIc=
+			gL02VDQxcw+pIcGRenp2JKM8zac=
 			</data>
 			<key>hash2</key>
 			<data>
-			tLBxSjyBYLJvvRU3tHBq1aQb+Lwh8WtXf2NZj4MrvnI=
+			Vj6MFa7ZBvMNOegb1DOcZ5k0GPBmG4WCfdEYFZ4j778=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dx+AoOVXaWc6PR+Jydl7BdPJYus=
+			gwV6dzFCyUdbeWjjNU9CHJ6iXLc=
 			</data>
 			<key>hash2</key>
 			<data>
-			DjukPYtKpHAkyZkGtEY4t7a9Zt8Mh6AQQ6i0yjxNb3k=
+			mynAJKrdjJDWg0DAgGZK25pT3sdZLTtPVK/UPuSrrZA=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3c69YlBz/O2g6WOOGGpNs4GxbIc=
+			gL02VDQxcw+pIcGRenp2JKM8zac=
 			</data>
 			<key>hash2</key>
 			<data>
-			tLBxSjyBYLJvvRU3tHBq1aQb+Lwh8WtXf2NZj4MrvnI=
+			Vj6MFa7ZBvMNOegb1DOcZ5k0GPBmG4WCfdEYFZ4j778=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L+Fd3VyVaj9yYwcoyfPdcjJIQ/Y=
+			iCjURtXusNDpsrchV+C3CGkSL4k=
 			</data>
 			<key>hash2</key>
 			<data>
-			e7+s9dDgBZbhV2NNVI96y7MpxSK+eTLrFkndkqclzMY=
+			3a0ALbwLwEQExtb4RwEBj+8d+rmmiNJyIKvdbTOats8=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -1606,44 +1606,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H5VcLwONf+qtGONWbn9/XVP5aZY=
+			r/yK/o9Su3+eMwI3A61DpGUyCQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			21QZwJQMIlvkvkZUql9b1vsAPhmLt3RSxq0eM7vkj2k=
+			PelS4veKU/7GrKiImujhYBhifba9B035sSvuxcM9w54=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5wXuHPnshqU15z3mbSq0QicAliA=
+			SCJ+6yM9ObJ+ZPq6hpBDMJ9/FOM=
 			</data>
 			<key>hash2</key>
 			<data>
-			NfrzjoLHW9DDY5uy8zuH6+bF0PfFCi7RG2oGgmm+Bfs=
+			f9j45i0kRiDVszjID0QPfcIAwpSNWXszEOd+K5G7I60=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H5VcLwONf+qtGONWbn9/XVP5aZY=
+			r/yK/o9Su3+eMwI3A61DpGUyCQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			21QZwJQMIlvkvkZUql9b1vsAPhmLt3RSxq0eM7vkj2k=
+			PelS4veKU/7GrKiImujhYBhifba9B035sSvuxcM9w54=
 			</data>
 		</dict>
 		<key>Modules/PayU_SDK_Lite.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cb4lZQIxSvotAFNex2kuEWdTcWM=
+			jNk83CLWQPn3eZN0pQ3ioIK6MWA=
 			</data>
 			<key>hash2</key>
 			<data>
-			+uIhDEz3wkJtrnJfx8Z+8D2QbcuM4aJjybZrdU0GjmM=
+			zhZqYCgVmNhhOrsyqhoUHVrRyhNQdYbUh1+UOjx6TF0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2079,22 +2079,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HEBb2iG1rpFLF36oz0ShxnOUhIE=
+			e56sgGhyE9acTqEb/Ie3yid/Kas=
 			</data>
 			<key>hash2</key>
 			<data>
-			KMjOtdnfjQFUaVx59cBCaPsCQp5DA9ZfloLpgoVUzY4=
+			q6fbEtivMzx4q0b2eRYjn2MBtytx7T+SqOBfw7CDcDY=
 			</data>
 		</dict>
 		<key>PUPaymentWidget.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zlG09GX/DgbE/0RtMYka1mtQYh0=
+			YeYkf3/bqn2vnKN12u5OS0GBAP8=
 			</data>
 			<key>hash2</key>
 			<data>
-			QtrPdJQd9Nbwd6UytKVNeUZ+qCV+fn0YQ9xlrAUeecg=
+			Fc6yZrQ2/LkOl3C7isOo0JQvaWd2Rq47e93m5kXPN8c=
 			</data>
 		</dict>
 		<key>PUSecureOverlayView.nib/objects-11.0+.nib</key>
