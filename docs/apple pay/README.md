@@ -73,7 +73,7 @@ since these are configured in the PayU sandbox to enable payments to be complete
 1. User adds items to basket in merchant app, Merchant app reacts to the add item action performed by user
 2. User goes to checkout page in merchant app, Merchant app reacts
 3. List of available payment methods is requested
-4. Merchant server sends oauth request to PayU server, PayU server sends oauth response to merchant server https://payu21.docs.apiary.io/#reference/api-endpoints/oauth-api-endpoint/get-access-token
+4. Merchant server sends oauth request to PayU server, PayU server sends oauth response to merchant server https://developers.payu.com/en/restapi.html#references_api_signature
 5. Merchant server requests a list of payment methods from PayU server, PayU server sends list of payment methods to merchant sever, Merchant server sends list of payment methods to merchant app
 6. Merchant app sends list of payment methods to PayU SDK, PayU SDK displays available payment methods
 7. User can select one of available payment methods. In this flow it will be Apple Pay
@@ -90,7 +90,7 @@ Main purpose of this module is to enable new payment method - Apple Pay handling
 - Creating `PUApplePayHandler` object to handle Apple Pay transaction and pass the payment token to merchant mobile app
 - Creating `PUApplePayTransaction` object and passing 'transaction details' (Apple merchant id, currency, country, user email address, description, total amount) to it
 - Calling `authorizeTransaction` method (with created `PUApplePayTransaction` object and `UIparent` as arguments) on created `PUApplePayHandler`
-- Receiving callback Apple Pay payment token to be used in payment process on merchant backed - order create request (if Apple Pay payment token was generated successfuly) [documentation](https://payu21.docs.apiary.io/#reference/api-endpoints/paymethods-api-endpoint/create-a-new-order)
+- Receiving callback Apple Pay payment token to be used in payment process on merchant backed - order create request (if Apple Pay payment token was generated successfuly) [documentation](https://developers.payu.com/en/restapi.html#creating_new_order_api)
 - Sending Order Create Request with Apple Pay payment token from merchant backend to PayU backend
 
 Because orders with the Apple Pay payment method will be billed as standard card payments, you may wish to consider integrating the [transaction data download service](http://developers.payu.com/en/restapi.html#trx_data_retrieve). 

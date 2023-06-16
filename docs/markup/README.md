@@ -275,7 +275,7 @@ This module contains objects:
     };
     ```
  To use WebPayment method module (PayByLink) you have to:
- - Initial condition - create order on PayU backend with PayByLink or 3DS payment (documentation link: https://payu21.docs.apiary.io/#reference/api-endpoints/order-api-endpoint/create-a-new-order)
+ - Initial condition - create order on PayU backend with PayByLink or 3DS payment (documentation link: https://developers.payu.com/en/restapi.html#creating_new_order_api)
  - create `PUPayByLinkAuthorizationRequest` and ﬁll all necessary ﬁelds (the only required ﬁeld is redirectUri, all others optional and can be used by merchant when authorization result receive)
  - create `PUWebAuthorizationViewController` with help of `PUWebAuthorizationBuilder` (`PUVisualStyle` injected)
     ```objc
@@ -446,7 +446,7 @@ When user trigger delete action for card token or PEX token payment method this 
 - (void)paymentWidgetService:(PUPaymentWidgetService *)paymentWidgetService didDeleteCardToken:(PUCardToken *)cardToken;
 - (void)paymentWidgetService:(PUPaymentWidgetService *)paymentWidgetService didDeletePexToken:(PUPexToken *)pexToken;
 ```
-which should be handle on PayU backend according to documentation: https://payu21.docs.apiary.io/#introduction/integration-flow
+which should be handle on PayU backend according to documentation: https://developers.payu.com/en/card_tokenization.html#deleting_tokens
 
 |  |  |  |  |
 | ----------- | ----------- | ----------- | ----------- |
