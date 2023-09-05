@@ -1,9 +1,12 @@
-# PayU SDK Lite
+# Warning: This PayU iOS SDK is deprecated!
+New SDK for iOS is available at https://github.com/PayU-EMEA/PayU-iOS-Swift
+
+## PayU SDK Lite
 
 PayU mobile SDK for iOS.
 Supports: iOS 10.x and above
 
-## Adding the CocoaPods dependency
+### Adding the CocoaPods dependency
 
 Add dependency to `Podfile`:
 
@@ -11,7 +14,7 @@ Add dependency to `Podfile`:
 pod "PayULite"
 ```
 
-## Adding the SPM (Swift Package Manager) dependency
+### Adding the SPM (Swift Package Manager) dependency
 
 Add dependency to `Package.swift` into `dependencies` section:
 
@@ -19,11 +22,11 @@ Add dependency to `Package.swift` into `dependencies` section:
 .package(url: "https://github.com/PayU-EMEA/PayU-iOS.git", .upToNextMajor(from: "1.0.10")),
 ```
 
-## Importing the SDK
+### Importing the SDK
 
 ```
 import PayU_SDK_Lite
 ```
 
-## Documentation:
+### Documentation:
 *  [Usage](docs/markup/README.md)
